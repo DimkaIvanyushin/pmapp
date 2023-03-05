@@ -13,4 +13,14 @@ code {
 
 :root {
   --text-color: #24292e;
+  --border-color: #e1e4e8;
+
+  --active-color: #0366d6;
+  --active-color-border: #c8e1ff;
+  --active-color-background: #f0f6fd;
+
+  --background-color: #fff;
+  --background-color-list: #fafbfc;
+
+  --success: #28a745;
 }

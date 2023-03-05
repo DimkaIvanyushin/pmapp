@@ -1,0 +1,7 @@
+.avatar-group {
+  display: flex;
+
+  & > div{
+    margin-left: -12px;
+  }
+}
