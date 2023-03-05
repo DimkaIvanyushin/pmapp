@@ -1,10 +1,10 @@
 import React from 'react';
-import { Milestones } from './core/components/smart/Milestones';
+import { ProjectMilestones } from './core/pages/ProjectMilestones';
 
 function App() {
   return (
     <div className="App">
-      <Milestones />
+      <ProjectMilestones />
     </div>
   );
 }
