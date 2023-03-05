@@ -1,0 +1,3574 @@
+[
+  {
+    "id": 299,
+    "iid": 90,
+    "project_id": 180,
+    "title": "v_1.50",
+    "description": "",
+    "state": "active",
+    "created_at": "2023-02-28T05:28:19.244Z",
+    "updated_at": "2023-02-28T05:28:19.244Z",
+    "due_date": null,
+    "start_date": null,
+    "expired": null,
+    "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90",
+    "issues": [
+      {
+        "id": 6342,
+        "iid": 2246,
+        "project_id": 180,
+        "title": "GraphQL: Исправить обработку System.OperationCanceledException.",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-03-03T07:12:28.695Z",
+        "updated_at": "2023-03-03T07:12:33.508Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["BE", "To Do", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 50,
+            "name": "Падерин Юрий Сергеевич",
+            "username": "Y.Paderin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+          }
+        ],
+        "author": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "assignee": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2246",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2246",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2246/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2246/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2246",
+          "relative": "#2246",
+          "full": "opo/gpo/is_nsi#2246"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6340,
+        "iid": 2245,
+        "project_id": 180,
+        "title": "Рефакторинг кода диаграммы ганта",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-03-02T07:33:08.886Z",
+        "updated_at": "2023-03-02T12:30:00.036Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["FE", "MID", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 62,
+            "name": "Ющенко Дмитрий Владимирович",
+            "username": "d.uschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+          }
+        ],
+        "author": {
+          "id": 62,
+          "name": "Ющенко Дмитрий Владимирович",
+          "username": "d.uschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+        },
+        "assignee": {
+          "id": 62,
+          "name": "Ющенко Дмитрий Владимирович",
+          "username": "d.uschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2245",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2245",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2245/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2245/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2245",
+          "relative": "#2245",
+          "full": "opo/gpo/is_nsi#2245"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6339,
+        "iid": 2244,
+        "project_id": 180,
+        "title": "ТЗ -> Исправить сброс фильтра по организации",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-03-02T05:10:13.196Z",
+        "updated_at": "2023-03-02T05:43:04.762Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["BUG", "CP", "FE", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2244",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2244",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2244/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2244/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2244",
+          "relative": "#2244",
+          "full": "opo/gpo/is_nsi#2244"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6338,
+        "iid": 2243,
+        "project_id": 180,
+        "title": "ТЗ -> При добавлении товаров в лот заменить столбец номер дополнения на верию",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-03-01T13:02:03.639Z",
+        "updated_at": "2023-03-02T04:50:46.446Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["CP", "FE", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2243",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2243",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2243/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2243/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2243",
+          "relative": "#2243",
+          "full": "opo/gpo/is_nsi#2243"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6337,
+        "iid": 2242,
+        "project_id": 180,
+        "title": "В ТЗ кнопки действия слева. Иконка РУПа",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-03-01T12:55:15.516Z",
+        "updated_at": "2023-03-02T05:12:38.926Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["CP", "FE", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 14,
+          "name": "Хмыльников Александр",
+          "username": "uc_opo2",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/14/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/uc_opo2"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2242",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2242",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2242/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2242/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2242",
+          "relative": "#2242",
+          "full": "opo/gpo/is_nsi#2242"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6336,
+        "iid": 2241,
+        "project_id": 180,
+        "title": "ЦЗ -> ТЗ: Исправить ошику при автоматизированной загрузке данных о товарах в технических заявках.",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-03-01T12:17:30.820Z",
+        "updated_at": "2023-03-01T12:32:55.421Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["BE", "BUG", "CP", "Testing", "changelog", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 50,
+            "name": "Падерин Юрий Сергеевич",
+            "username": "Y.Paderin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+          }
+        ],
+        "author": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "assignee": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2241",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2241",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2241/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2241/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2241",
+          "relative": "#2241",
+          "full": "opo/gpo/is_nsi#2241"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6335,
+        "iid": 2240,
+        "project_id": 180,
+        "title": "Исправить формат даты в сообщении, при получении средневзвешенного курса",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-03-01T10:36:32.513Z",
+        "updated_at": "2023-03-01T10:58:08.687Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["BE", "BUG", "NSI", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 67,
+            "name": "Новиков Антон Сергеевич",
+            "username": "A.Novikov",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/67/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/A.Novikov"
+          }
+        ],
+        "author": {
+          "id": 67,
+          "name": "Новиков Антон Сергеевич",
+          "username": "A.Novikov",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/67/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/A.Novikov"
+        },
+        "assignee": {
+          "id": 67,
+          "name": "Новиков Антон Сергеевич",
+          "username": "A.Novikov",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/67/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/A.Novikov"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2240",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2240",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2240/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2240/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2240",
+          "relative": "#2240",
+          "full": "opo/gpo/is_nsi#2240"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6334,
+        "iid": 2239,
+        "project_id": 180,
+        "title": "ЦЗ -> ТЗ: Разрешить указывать стоимость больше, чем в квартальном плане закупок при автоматической загрузке данных о товарах в технических заявках.",
+        "description": "",
+        "state": "opened",
+        "created_at": "2023-03-01T08:35:04.285Z",
+        "updated_at": "2023-03-03T04:49:15.043Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["BE", "BUG", "CP", "To Do", "changelog", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 50,
+            "name": "Падерин Юрий Сергеевич",
+            "username": "Y.Paderin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+          }
+        ],
+        "author": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "assignee": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2239",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2239",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2239/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2239/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2239",
+          "relative": "#2239",
+          "full": "opo/gpo/is_nsi#2239"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6332,
+        "iid": 2238,
+        "project_id": 180,
+        "title": "ЦЗ -> ТЗ: Добавить номер версии в модель товара технической заявки.",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-03-01T06:25:58.743Z",
+        "updated_at": "2023-03-01T06:56:27.283Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["CP", "FE", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2238",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2238",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2238/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2238/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2238",
+          "relative": "#2238",
+          "full": "opo/gpo/is_nsi#2238"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6331,
+        "iid": 2237,
+        "project_id": 180,
+        "title": "Запасы ТМЦ: Перевести строку 70 отчета по запасам ТМЦ в ОМТС.",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-03-01T05:49:29.432Z",
+        "updated_at": "2023-03-01T06:58:56.390Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["BE", "REM", "Testing", "changelog", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 50,
+            "name": "Падерин Юрий Сергеевич",
+            "username": "Y.Paderin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+          }
+        ],
+        "author": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "assignee": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2237",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2237",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2237/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2237/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2237",
+          "relative": "#2237",
+          "full": "opo/gpo/is_nsi#2237"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6330,
+        "iid": 2236,
+        "project_id": 180,
+        "title": "ЦЗ -> ТЗ: Добавить номер версии в модель товара технической заявки.",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-03-01T05:15:39.212Z",
+        "updated_at": "2023-03-01T10:19:47.073Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["BE", "CP", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 50,
+            "name": "Падерин Юрий Сергеевич",
+            "username": "Y.Paderin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+          }
+        ],
+        "author": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "assignee": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2236",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2236",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2236/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2236/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2236",
+          "relative": "#2236",
+          "full": "opo/gpo/is_nsi#2236"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6329,
+        "iid": 2235,
+        "project_id": 180,
+        "title": "Изменение/сохранение ширин колонок в табл. добавления товаров в лоты",
+        "description": "",
+        "state": "opened",
+        "created_at": "2023-02-28T13:37:48.744Z",
+        "updated_at": "2023-03-03T08:36:02.796Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["CP", "Doing", "FE", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 62,
+            "name": "Ющенко Дмитрий Владимирович",
+            "username": "d.uschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+          }
+        ],
+        "author": {
+          "id": 14,
+          "name": "Хмыльников Александр",
+          "username": "uc_opo2",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/14/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/uc_opo2"
+        },
+        "assignee": {
+          "id": 62,
+          "name": "Ющенко Дмитрий Владимирович",
+          "username": "d.uschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2235",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2235",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2235/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2235/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2235",
+          "relative": "#2235",
+          "full": "opo/gpo/is_nsi#2235"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6328,
+        "iid": 2234,
+        "project_id": 180,
+        "title": "В ТЗ нет единиц изменения",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-02-28T13:35:15.344Z",
+        "updated_at": "2023-03-01T10:58:51.529Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["CP", "FE", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 72,
+            "name": "Калачёв Кирилл Сергеевич",
+            "username": "k.kalachev",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/72/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/k.kalachev"
+          }
+        ],
+        "author": {
+          "id": 14,
+          "name": "Хмыльников Александр",
+          "username": "uc_opo2",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/14/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/uc_opo2"
+        },
+        "assignee": {
+          "id": 72,
+          "name": "Калачёв Кирилл Сергеевич",
+          "username": "k.kalachev",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/72/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/k.kalachev"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2234",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2234",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2234/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2234/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2234",
+          "relative": "#2234",
+          "full": "opo/gpo/is_nsi#2234"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6327,
+        "iid": 2233,
+        "project_id": 180,
+        "title": "Отчет по КП. Excel. Добавит колонки Филиал, Служба",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-02-28T13:34:26.968Z",
+        "updated_at": "2023-03-01T06:48:10.838Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["CP", "FE", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 62,
+            "name": "Ющенко Дмитрий Владимирович",
+            "username": "d.uschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+          }
+        ],
+        "author": {
+          "id": 14,
+          "name": "Хмыльников Александр",
+          "username": "uc_opo2",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/14/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/uc_opo2"
+        },
+        "assignee": {
+          "id": 62,
+          "name": "Ющенко Дмитрий Владимирович",
+          "username": "d.uschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2233",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2233",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2233/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2233/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2233",
+          "relative": "#2233",
+          "full": "opo/gpo/is_nsi#2233"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6326,
+        "iid": 2232,
+        "project_id": 180,
+        "title": "Отчет по остаткам . Аварийный резерв в колонках ОМТС",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-02-28T13:33:00.111Z",
+        "updated_at": "2023-03-01T06:58:57.538Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["FE", "IAS", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 50,
+            "name": "Падерин Юрий Сергеевич",
+            "username": "Y.Paderin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+          }
+        ],
+        "author": {
+          "id": 14,
+          "name": "Хмыльников Александр",
+          "username": "uc_opo2",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/14/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/uc_opo2"
+        },
+        "assignee": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2232",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2232",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2232/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2232/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2232",
+          "relative": "#2232",
+          "full": "opo/gpo/is_nsi#2232"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6324,
+        "iid": 2230,
+        "project_id": 180,
+        "title": "Доработка доки по КП, ТЗ",
+        "description": "",
+        "state": "opened",
+        "created_at": "2023-02-28T12:59:37.779Z",
+        "updated_at": "2023-03-02T05:14:19.263Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["CP", "Doing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 14,
+          "name": "Хмыльников Александр",
+          "username": "uc_opo2",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/14/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/uc_opo2"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2230",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2230",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2230/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2230/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2230",
+          "relative": "#2230",
+          "full": "opo/gpo/is_nsi#2230"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6323,
+        "iid": 2229,
+        "project_id": 180,
+        "title": "Сортировка обратная нужна, самые новые сверху. См #багтрекер. Павел Кабанов 15:43",
+        "description": "",
+        "state": "opened",
+        "created_at": "2023-02-28T12:48:06.496Z",
+        "updated_at": "2023-03-01T06:21:25.866Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["Doing", "FE", "IAS", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 14,
+          "name": "Хмыльников Александр",
+          "username": "uc_opo2",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/14/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/uc_opo2"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2229",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2229",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2229/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2229/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2229",
+          "relative": "#2229",
+          "full": "opo/gpo/is_nsi#2229"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6321,
+        "iid": 2227,
+        "project_id": 180,
+        "title": "Таблица КП. Колонка дата. Формат. Такое может быть везде.",
+        "description": "",
+        "state": "opened",
+        "created_at": "2023-02-28T12:45:12.341Z",
+        "updated_at": "2023-03-01T10:59:05.723Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["FE", "IAS", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 72,
+            "name": "Калачёв Кирилл Сергеевич",
+            "username": "k.kalachev",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/72/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/k.kalachev"
+          }
+        ],
+        "author": {
+          "id": 14,
+          "name": "Хмыльников Александр",
+          "username": "uc_opo2",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/14/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/uc_opo2"
+        },
+        "assignee": {
+          "id": 72,
+          "name": "Калачёв Кирилл Сергеевич",
+          "username": "k.kalachev",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/72/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/k.kalachev"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2227",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2227",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2227/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2227/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2227",
+          "relative": "#2227",
+          "full": "opo/gpo/is_nsi#2227"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6320,
+        "iid": 2226,
+        "project_id": 180,
+        "title": "Исправить баг с изменением ширины колонок в таблице.",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-02-28T12:43:56.280Z",
+        "updated_at": "2023-03-02T09:21:10.233Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["FE", "IAS", "Testing", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 27,
+            "name": "Иванюшин Дмитрий Владимирович",
+            "username": "D.Ivanushin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+          }
+        ],
+        "author": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "assignee": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2226",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2226",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2226/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2226/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2226",
+          "relative": "#2226",
+          "full": "opo/gpo/is_nsi#2226"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6318,
+        "iid": 2224,
+        "project_id": 180,
+        "title": "ЦЗ -> ТЗ: Исправить ошибку с учетом стоимости скрытых товаров.",
+        "description": null,
+        "state": "opened",
+        "created_at": "2023-02-28T10:52:03.508Z",
+        "updated_at": "2023-03-01T12:25:46.672Z",
+        "closed_at": null,
+        "closed_by": null,
+        "labels": ["BE", "BUG", "CP", "Testing", "changelog", "v_1.50"],
+        "milestone": {
+          "id": 299,
+          "iid": 90,
+          "project_id": 180,
+          "title": "v_1.50",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-28T05:28:19.244Z",
+          "updated_at": "2023-02-28T05:28:19.244Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/90"
+        },
+        "assignees": [
+          {
+            "id": 50,
+            "name": "Падерин Юрий Сергеевич",
+            "username": "Y.Paderin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+          }
+        ],
+        "author": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "assignee": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2224",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2224",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2224/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2224/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2224",
+          "relative": "#2224",
+          "full": "opo/gpo/is_nsi#2224"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      }
+    ]
+  },
+  {
+    "id": 296,
+    "iid": 89,
+    "project_id": 180,
+    "title": "v_1.49",
+    "description": "",
+    "state": "active",
+    "created_at": "2023-02-15T04:49:23.174Z",
+    "updated_at": "2023-02-15T04:49:23.174Z",
+    "due_date": null,
+    "start_date": null,
+    "expired": null,
+    "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89",
+    "issues": [
+      {
+        "id": 6319,
+        "iid": 2225,
+        "project_id": 180,
+        "title": "ЦЗ -> ТЗ: Исправить ошибку при создании технической заявки при помеченной ТЗ с таким же номером.",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-28T11:17:14.289Z",
+        "updated_at": "2023-03-01T10:28:36.152Z",
+        "closed_at": "2023-03-01T10:28:36.128Z",
+        "closed_by": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "labels": ["BE", "BUG", "CP", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 50,
+            "name": "Падерин Юрий Сергеевич",
+            "username": "Y.Paderin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+          }
+        ],
+        "author": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "assignee": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2225",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2225",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2225/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2225/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2225",
+          "relative": "#2225",
+          "full": "opo/gpo/is_nsi#2225"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6312,
+        "iid": 2219,
+        "project_id": 180,
+        "title": "Запасы ТМЦ на складах. Исправить ошибку с датой.",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-28T05:33:06.832Z",
+        "updated_at": "2023-02-28T08:03:47.075Z",
+        "closed_at": "2023-02-28T08:03:47.041Z",
+        "closed_by": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "labels": ["BUG", "FE", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 27,
+            "name": "Иванюшин Дмитрий Владимирович",
+            "username": "D.Ivanushin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+          }
+        ],
+        "author": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "assignee": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": "2023-02-28",
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2219",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2219",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2219/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2219/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2219",
+          "relative": "#2219",
+          "full": "opo/gpo/is_nsi#2219"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6311,
+        "iid": 2218,
+        "project_id": 180,
+        "title": "Остатки ТМЦ -> Добавить строчку с новой категорией запасов ТМЦ в отчет по запасам ТМЦ на складах.",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-28T05:28:56.342Z",
+        "updated_at": "2023-03-01T10:28:40.496Z",
+        "closed_at": "2023-03-01T10:28:40.471Z",
+        "closed_by": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "labels": ["BE", "REM", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 50,
+            "name": "Падерин Юрий Сергеевич",
+            "username": "Y.Paderin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+          }
+        ],
+        "author": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "assignee": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2218",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2218",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2218/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2218/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2218",
+          "relative": "#2218",
+          "full": "opo/gpo/is_nsi#2218"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6310,
+        "iid": 2217,
+        "project_id": 180,
+        "title": "НСИ -> Справочник категорий запасов ТМЦ: Добавить категорию.",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-28T05:23:15.779Z",
+        "updated_at": "2023-03-01T10:28:43.006Z",
+        "closed_at": "2023-03-01T10:28:42.975Z",
+        "closed_by": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "labels": ["BE", "NSI", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 50,
+            "name": "Падерин Юрий Сергеевич",
+            "username": "Y.Paderin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+          }
+        ],
+        "author": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "assignee": {
+          "id": 50,
+          "name": "Падерин Юрий Сергеевич",
+          "username": "Y.Paderin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/50/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/Y.Paderin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2217",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2217",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2217/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2217/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2217",
+          "relative": "#2217",
+          "full": "opo/gpo/is_nsi#2217"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6308,
+        "iid": 2216,
+        "project_id": 180,
+        "title": "ИС НСИ -> Отфильтровать устаревшие записи \"Всего записей в ЕК ТМЦ\" в дашбордах",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-27T13:09:34.725Z",
+        "updated_at": "2023-02-28T07:41:53.606Z",
+        "closed_at": "2023-02-28T07:41:53.494Z",
+        "closed_by": {
+          "id": 62,
+          "name": "Ющенко Дмитрий Владимирович",
+          "username": "d.uschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+        },
+        "labels": ["FE", "IAS", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 72,
+            "name": "Калачёв Кирилл Сергеевич",
+            "username": "k.kalachev",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/72/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/k.kalachev"
+          }
+        ],
+        "author": {
+          "id": 72,
+          "name": "Калачёв Кирилл Сергеевич",
+          "username": "k.kalachev",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/72/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/k.kalachev"
+        },
+        "assignee": {
+          "id": 72,
+          "name": "Калачёв Кирилл Сергеевич",
+          "username": "k.kalachev",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/72/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/k.kalachev"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2216",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2216",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2216/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2216/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2216",
+          "relative": "#2216",
+          "full": "opo/gpo/is_nsi#2216"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6307,
+        "iid": 2215,
+        "project_id": 180,
+        "title": "Изменить API получения средневзвешенного курса",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-27T05:43:28.184Z",
+        "updated_at": "2023-02-28T12:10:32.027Z",
+        "closed_at": "2023-02-28T12:10:32.003Z",
+        "closed_by": {
+          "id": 67,
+          "name": "Новиков Антон Сергеевич",
+          "username": "A.Novikov",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/67/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/A.Novikov"
+        },
+        "labels": ["BE", "IAS", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 67,
+            "name": "Новиков Антон Сергеевич",
+            "username": "A.Novikov",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/67/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/A.Novikov"
+          }
+        ],
+        "author": {
+          "id": 67,
+          "name": "Новиков Антон Сергеевич",
+          "username": "A.Novikov",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/67/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/A.Novikov"
+        },
+        "assignee": {
+          "id": 67,
+          "name": "Новиков Антон Сергеевич",
+          "username": "A.Novikov",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/67/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/A.Novikov"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2215",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2215",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2215/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2215/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2215",
+          "relative": "#2215",
+          "full": "opo/gpo/is_nsi#2215"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6306,
+        "iid": 2214,
+        "project_id": 180,
+        "title": "ЦЗ -> В ТЗ в действиях вместо \"Согласовать план\" нужно сделать просто \"Согласовать\"",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-25T11:48:48.454Z",
+        "updated_at": "2023-03-02T05:14:01.772Z",
+        "closed_at": "2023-03-02T05:14:01.742Z",
+        "closed_by": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "labels": ["CP", "FE", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2214",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2214",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2214/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2214/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2214",
+          "relative": "#2214",
+          "full": "opo/gpo/is_nsi#2214"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6304,
+        "iid": 2212,
+        "project_id": 180,
+        "title": "ЦЗ -> При сравнении версий плана добавить расширенный поиск",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-25T11:24:19.662Z",
+        "updated_at": "2023-03-02T05:13:59.629Z",
+        "closed_at": "2023-03-02T05:13:59.607Z",
+        "closed_by": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "labels": ["CP", "FE", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2212",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2212",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2212/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2212/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2212",
+          "relative": "#2212",
+          "full": "opo/gpo/is_nsi#2212"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6296,
+        "iid": 2211,
+        "project_id": 180,
+        "title": "При отклонении заявки администратором отображается пустое модальное окно, скрин в описании.",
+        "description": "![image](/uploads/1e2049e4e501c5a8cb15984a91391ee2/image.png)\n\n![image](/uploads/0c9ed0e53b4c86116896221ca23248e8/image.png)",
+        "state": "closed",
+        "created_at": "2023-02-24T05:34:11.520Z",
+        "updated_at": "2023-02-24T08:51:59.323Z",
+        "closed_at": "2023-02-24T08:51:59.296Z",
+        "closed_by": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "labels": ["FE", "IAS", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 27,
+            "name": "Иванюшин Дмитрий Владимирович",
+            "username": "D.Ivanushin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+          }
+        ],
+        "author": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "assignee": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": "2023-02-24",
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2211",
+        "time_stats": {
+          "time_estimate": 900,
+          "total_time_spent": 0,
+          "human_time_estimate": "15m",
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2211",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2211/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2211/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2211",
+          "relative": "#2211",
+          "full": "opo/gpo/is_nsi#2211"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6295,
+        "iid": 2210,
+        "project_id": 180,
+        "title": "Проверку на существование кода на замену ЕК ТМЦ делать после открытия компонента",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-24T05:16:13.643Z",
+        "updated_at": "2023-03-02T12:45:14.782Z",
+        "closed_at": "2023-03-02T12:45:14.712Z",
+        "closed_by": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "labels": ["FE", "IAS", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 42,
+            "name": "Бородин Евгений Дмитриевич",
+            "username": "E.Borodin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/42/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/E.Borodin"
+          }
+        ],
+        "author": {
+          "id": 42,
+          "name": "Бородин Евгений Дмитриевич",
+          "username": "E.Borodin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/42/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/E.Borodin"
+        },
+        "assignee": {
+          "id": 42,
+          "name": "Бородин Евгений Дмитриевич",
+          "username": "E.Borodin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/42/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/E.Borodin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2210",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2210",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2210/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2210/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2210",
+          "relative": "#2210",
+          "full": "opo/gpo/is_nsi#2210"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6294,
+        "iid": 2209,
+        "project_id": 180,
+        "title": "Вынести компонент редактирования текста в отдельный модуль",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-24T05:15:39.447Z",
+        "updated_at": "2023-03-02T12:45:15.525Z",
+        "closed_at": "2023-03-02T12:45:15.415Z",
+        "closed_by": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "labels": ["FE", "IAS", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 42,
+            "name": "Бородин Евгений Дмитриевич",
+            "username": "E.Borodin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/42/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/E.Borodin"
+          }
+        ],
+        "author": {
+          "id": 42,
+          "name": "Бородин Евгений Дмитриевич",
+          "username": "E.Borodin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/42/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/E.Borodin"
+        },
+        "assignee": {
+          "id": 42,
+          "name": "Бородин Евгений Дмитриевич",
+          "username": "E.Borodin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/42/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/E.Borodin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2209",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2209",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2209/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2209/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2209",
+          "relative": "#2209",
+          "full": "opo/gpo/is_nsi#2209"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6293,
+        "iid": 2208,
+        "project_id": 180,
+        "title": "ЦЗ -> Квартальные планы: Реализовать сравнение с предыдущей версией для режима редактирования и корректировки",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-24T04:56:21.143Z",
+        "updated_at": "2023-03-02T05:13:58.219Z",
+        "closed_at": "2023-03-02T05:13:58.194Z",
+        "closed_by": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "labels": ["CP", "FE", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2208",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2208",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2208/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2208/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2208",
+          "relative": "#2208",
+          "full": "opo/gpo/is_nsi#2208"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6292,
+        "iid": 2207,
+        "project_id": 180,
+        "title": "ЦЗ -> Квартальные планы: В режиме дополнения сделать недоступными для редактирования товары, которые участвуют в предыдущей версии плана",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-24T04:55:04.502Z",
+        "updated_at": "2023-03-02T05:13:54.876Z",
+        "closed_at": "2023-03-02T05:13:54.838Z",
+        "closed_by": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "labels": ["CP", "FE", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2207",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2207",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2207/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2207/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2207",
+          "relative": "#2207",
+          "full": "opo/gpo/is_nsi#2207"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6291,
+        "iid": 2206,
+        "project_id": 180,
+        "title": "TypeError: Cannot read properties of undefined (reading '-1')",
+        "description": "Sentry Issue: [ISNSI-CLIENT-PROD-18F](http://sentry.vitebsk.energo.by/sentry/isnsi-client-prod/issues/3364/?referrer=gitlab_integration)\n\n```\nTypeError: Cannot read properties of undefined (reading '-1')\n  at u.cancleDemond (/1076.b0cf2a5374db9515.js:1:123438)\n  at None (/1076.b0cf2a5374db9515.js:1:56543)\n  at u2 (/main.1bcc52151bd61ae8.js:2044:909960)\n  at V (/main.1bcc52151bd61ae8.js:2044:910101)\n  at HTMLButtonElement.<anonymous> (/main.1bcc52151bd61ae8.js:2044:1008866)\n...\n(9 additional frame(s) were not displayed)\n```",
+        "state": "closed",
+        "created_at": "2023-02-23T13:14:55.275Z",
+        "updated_at": "2023-02-23T14:00:01.072Z",
+        "closed_at": "2023-02-23T14:00:01.026Z",
+        "closed_by": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "labels": ["BUG", "FE", "IAS", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 27,
+            "name": "Иванюшин Дмитрий Владимирович",
+            "username": "D.Ivanushin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+          }
+        ],
+        "author": {
+          "id": 43,
+          "name": "Краско Антон Дмитриевич",
+          "username": "oisadmin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/43/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/oisadmin"
+        },
+        "assignee": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": "2023-02-23",
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2206",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2206",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2206/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2206/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2206",
+          "relative": "#2206",
+          "full": "opo/gpo/is_nsi#2206"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6289,
+        "iid": 2205,
+        "project_id": 180,
+        "title": "Добавить вывод на печать отчетов по запасам",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-23T12:28:21.473Z",
+        "updated_at": "2023-02-27T12:30:10.134Z",
+        "closed_at": "2023-02-27T12:30:10.029Z",
+        "closed_by": {
+          "id": 62,
+          "name": "Ющенко Дмитрий Владимирович",
+          "username": "d.uschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+        },
+        "labels": ["FE", "IAS", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 62,
+            "name": "Ющенко Дмитрий Владимирович",
+            "username": "d.uschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+          }
+        ],
+        "author": {
+          "id": 14,
+          "name": "Хмыльников Александр",
+          "username": "uc_opo2",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/14/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/uc_opo2"
+        },
+        "assignee": {
+          "id": 62,
+          "name": "Ющенко Дмитрий Владимирович",
+          "username": "d.uschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/62/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/d.uschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2205",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2205",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2205/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2205/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2205",
+          "relative": "#2205",
+          "full": "opo/gpo/is_nsi#2205"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6288,
+        "iid": 2204,
+        "project_id": 180,
+        "title": "Рефакторинг метода отправки уведомлений учетный объектов",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-23T12:15:33.384Z",
+        "updated_at": "2023-02-28T12:10:18.591Z",
+        "closed_at": "2023-02-28T12:10:18.562Z",
+        "closed_by": {
+          "id": 59,
+          "name": "Клебанов Станислав Андреевич",
+          "username": "S.Klebanov",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/59/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/S.Klebanov"
+        },
+        "labels": ["BE", "MID", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 59,
+            "name": "Клебанов Станислав Андреевич",
+            "username": "S.Klebanov",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/59/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/S.Klebanov"
+          }
+        ],
+        "author": {
+          "id": 59,
+          "name": "Клебанов Станислав Андреевич",
+          "username": "S.Klebanov",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/59/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/S.Klebanov"
+        },
+        "assignee": {
+          "id": 59,
+          "name": "Клебанов Станислав Андреевич",
+          "username": "S.Klebanov",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/59/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/S.Klebanov"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2204",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2204",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2204/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2204/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2204",
+          "relative": "#2204",
+          "full": "opo/gpo/is_nsi#2204"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6284,
+        "iid": 2203,
+        "project_id": 180,
+        "title": "В меню пользователя вывести ФИО.",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-23T05:58:22.285Z",
+        "updated_at": "2023-02-23T11:57:09.638Z",
+        "closed_at": "2023-02-23T11:57:09.609Z",
+        "closed_by": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "labels": ["FE", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 27,
+            "name": "Иванюшин Дмитрий Владимирович",
+            "username": "D.Ivanushin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+          }
+        ],
+        "author": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "assignee": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": "2023-02-23",
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2203",
+        "time_stats": {
+          "time_estimate": 300,
+          "total_time_spent": 300,
+          "human_time_estimate": "5m",
+          "human_total_time_spent": "5m"
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2203",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2203/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2203/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2203",
+          "relative": "#2203",
+          "full": "opo/gpo/is_nsi#2203"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6283,
+        "iid": 2202,
+        "project_id": 180,
+        "title": "Переименовать копирайт на лавной странице на \"Учебный центр\" РУП \"Витебскэнерго\".",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-23T05:56:59.788Z",
+        "updated_at": "2023-02-23T11:57:10.568Z",
+        "closed_at": "2023-02-23T11:57:10.547Z",
+        "closed_by": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "labels": ["FE", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 27,
+            "name": "Иванюшин Дмитрий Владимирович",
+            "username": "D.Ivanushin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+          }
+        ],
+        "author": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "assignee": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": "2023-02-23",
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2202",
+        "time_stats": {
+          "time_estimate": 300,
+          "total_time_spent": 300,
+          "human_time_estimate": "5m",
+          "human_total_time_spent": "5m"
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2202",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2202/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2202/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2202",
+          "relative": "#2202",
+          "full": "opo/gpo/is_nsi#2202"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6281,
+        "iid": 2200,
+        "project_id": 180,
+        "title": "Error: Uncaught (in promise): DataError: Failed to execute 'get' on 'IDBObjectStore': No key or key rang...",
+        "description": "Sentry Issue: [ISNSI-CLIENT-PROD-17P](http://sentry.vitebsk.energo.by/sentry/isnsi-client-prod/issues/3304/?referrer=gitlab_integration)\n\n```\nError: Uncaught (in promise): DataError: Failed to execute 'get' on 'IDBObjectStore': No key or key range specified.\n DataError: Failed to execute 'get' on 'IDBObjectStore': No key or key range specified.\nError: Failed to execute 'get' on 'IDBObjectStore': ...\n  at None (/8527.14884dc4129db616.js:793:60469)\n  at Lo (/8527.14884dc4129db616.js:793:27296)\n  at new z (/8527.14884dc4129db616.js:793:26796)\n  at Object.get (/8527.14884dc4129db616.js:793:60416)\n  at g.<computed> [as get] (/8527.14884dc4129db616.js:793:76939)\n...\n(45 additional frame(s) were not displayed)\n```",
+        "state": "closed",
+        "created_at": "2023-02-23T05:19:09.663Z",
+        "updated_at": "2023-02-23T05:31:07.778Z",
+        "closed_at": "2023-02-23T05:31:07.756Z",
+        "closed_by": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "labels": ["BUG", "FE", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 27,
+            "name": "Иванюшин Дмитрий Владимирович",
+            "username": "D.Ivanushin",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+          }
+        ],
+        "author": {
+          "id": 43,
+          "name": "Краско Антон Дмитриевич",
+          "username": "oisadmin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/43/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/oisadmin"
+        },
+        "assignee": {
+          "id": 27,
+          "name": "Иванюшин Дмитрий Владимирович",
+          "username": "D.Ivanushin",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/27/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/D.Ivanushin"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2200",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2200",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2200/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2200/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2200",
+          "relative": "#2200",
+          "full": "opo/gpo/is_nsi#2200"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      },
+      {
+        "id": 6280,
+        "iid": 2199,
+        "project_id": 180,
+        "title": "ЦЗ -> Квартальные планы: Добавить возможность добавлять корректировки к плану",
+        "description": null,
+        "state": "closed",
+        "created_at": "2023-02-22T13:44:23.612Z",
+        "updated_at": "2023-03-02T05:13:51.324Z",
+        "closed_at": "2023-03-02T05:13:51.302Z",
+        "closed_by": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "labels": ["CP", "FE", "v_1.49"],
+        "milestone": {
+          "id": 296,
+          "iid": 89,
+          "project_id": 180,
+          "title": "v_1.49",
+          "description": "",
+          "state": "active",
+          "created_at": "2023-02-15T04:49:23.174Z",
+          "updated_at": "2023-02-15T04:49:23.174Z",
+          "due_date": null,
+          "start_date": null,
+          "expired": null,
+          "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/milestones/89"
+        },
+        "assignees": [
+          {
+            "id": 61,
+            "name": "Гущенко Виталий Андреевич",
+            "username": "v.guschenko",
+            "state": "active",
+            "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+            "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+          }
+        ],
+        "author": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "assignee": {
+          "id": 61,
+          "name": "Гущенко Виталий Андреевич",
+          "username": "v.guschenko",
+          "state": "active",
+          "avatar_url": "http://gitlab.vitebsk.energo.net/uploads/-/system/user/avatar/61/avatar.png",
+          "web_url": "http://gitlab.vitebsk.energo.net/v.guschenko"
+        },
+        "user_notes_count": 0,
+        "merge_requests_count": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "due_date": null,
+        "confidential": false,
+        "discussion_locked": null,
+        "web_url": "http://gitlab.vitebsk.energo.net/opo/gpo/is_nsi/-/issues/2199",
+        "time_stats": {
+          "time_estimate": 0,
+          "total_time_spent": 0,
+          "human_time_estimate": null,
+          "human_total_time_spent": null
+        },
+        "task_completion_status": {
+          "count": 0,
+          "completed_count": 0
+        },
+        "has_tasks": false,
+        "_links": {
+          "self": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2199",
+          "notes": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2199/notes",
+          "award_emoji": "http://gitlab.vitebsk.energo.net/api/v4/projects/180/issues/2199/award_emoji",
+          "project": "http://gitlab.vitebsk.energo.net/api/v4/projects/180"
+        },
+        "references": {
+          "short": "#2199",
+          "relative": "#2199",
+          "full": "opo/gpo/is_nsi#2199"
+        },
+        "moved_to_id": null,
+        "service_desk_reply_to": null
+      }
+    ]
+  }
+]

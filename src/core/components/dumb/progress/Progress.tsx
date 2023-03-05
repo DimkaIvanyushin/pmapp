@@ -14,8 +14,7 @@ export const Progress = ({ children, percent = 0, type = 'inline' }: ProgressPro
       return <img src={successIcon} alt='success icon' />;
     }
 
- 
-    return <span></span>
+    return <span></span>;
   }
 
   return (
