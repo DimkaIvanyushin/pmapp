@@ -25,6 +25,6 @@ code {
   --success: #28a745;
 }
 
-span.bold {
+.bold {
   font-weight: 500;
 }
