@@ -31,7 +31,7 @@ export const Milestones = () => {
       <Milestone type='create' />
 
       {milestonesState.milestones.map((milestone) => (
-        <Milestone key={milestone.id} title={milestone.title} percent={30} />
+        <Milestone key={milestone.id} milestone={milestone} />
       ))}
     </div>
   );

@@ -24,3 +24,7 @@ code {
 
   --success: #28a745;
 }
+
+span.bold {
+  font-weight: 500;
+}

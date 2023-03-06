@@ -1,14 +1,26 @@
 import * as React from 'react';
 import './Avatar.scss';
+import userIcon from '../../../../assets/images/user.svg';
 
 type AvatarProps = {
-  src: string;
+  src?: string;
+  text?: string;
+  backgroundColor?: string;
+  color?: string;
 };
 
-export const Avatar = ({ src }: AvatarProps) => {
+export const Avatar = ({ src, text, backgroundColor = '#e1e4e', color = '#fff' }: AvatarProps) => {
   return (
-    <div className='avatar'>
-      <img src={src} alt='avatar' />
+    <div className='avatar' style={{ backgroundColor, color }}>
+      {text ? (
+        <span>{text}</span>
+      ) : (
+        <img
+          src={src}
+          alt='avatar'
+          onError={({ currentTarget }) => (currentTarget.src = userIcon)}
+        />
+      )}
     </div>
   );
 };
