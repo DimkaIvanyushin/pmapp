@@ -8,7 +8,7 @@ import dateGlif from '../../../../assets/images/date-glif.svg';
 
 type CardProps = {
   text: string;
-  id?: string;
+  id?: number;
   date?: string;
   type?: 'debug' | 'success';
   avatarSrc?: string;

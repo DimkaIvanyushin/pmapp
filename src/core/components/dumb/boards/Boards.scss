@@ -1,0 +1,16 @@
+.boards {
+  display: flex;
+  flex-wrap: nowrap;
+
+  .board:nth-child(2) {
+    margin: 0 10px;
+  }
+
+  .board {
+    width: 280px;
+
+    .card {
+      margin-bottom: 10px;
+    }
+  }
+}

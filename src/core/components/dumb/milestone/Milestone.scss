@@ -9,6 +9,7 @@
   transition: 0.4s ease;
 
   &.create {
+    position: relative;
     border: 2px dashed var(--active-color-border);
     background-color: var(--active-color-background);
     border-style: border;
@@ -39,6 +40,14 @@
   .avatar-group {
     margin: 0 15px;
   }
+}
+
+.milestone-body {
+  background-color: var(--background-color-list);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 0 0 6px 6px;
+  border-top: 0;
 }
 
 .card {

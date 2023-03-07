@@ -1,0 +1,21 @@
+.board {
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 5px 10px 15px 10px;
+    border-radius: 0 0 6px 6px;
+    border-top: 0;
+    
+    img {
+      height: 15px;
+      margin-right: 3px;
+    }
+  }
+
+  .empty{
+    margin: 40px 0;
+  }
+}
