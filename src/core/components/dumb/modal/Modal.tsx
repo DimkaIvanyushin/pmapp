@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Modal.scss';
 import { Button } from '../button/Button';
 import { CloseIcon } from '../icons/close/Close';
@@ -10,16 +10,31 @@ type ModalProps = {
   onOk?: () => Promise<void>;
 };
 
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-export function Modal({ title, children, onClose }: ModalProps) {
+export function Modal({ title, children, onClose, onOk }: ModalProps) {
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {
+    document.addEventListener('keydown', handleEsc, false);
+    return () => document.removeEventListener('keydown', handleEsc, false);
+  }, []);
+
+  function handleEsc(event: KeyboardEvent) {
+    switch (event.key) {
+      case 'Escape':
+        onClose();
+        break;
+
+      case 'Enter':
+        onOk?.();
+        break;
+    }
+  }
+
   async function okHandler() {
+    if (!onOk) return;
+
     setIsLoading(true);
-    await delay(2000);
+    await onOk();
     setIsLoading(false);
   }
 

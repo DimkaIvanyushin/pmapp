@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Modal } from '../../dumb/modal/Modal';
 import { createPortal } from 'react-dom';
 import { Milestone } from '../../dumb/milestone/Milestone';
+import { Input } from '../../dumb/input/Input';
+import { Label } from '../../dumb/label/Label';
 
 export function MilestoneCreate() {
   const [showModal, setShowModal] = useState(false);
@@ -15,7 +17,10 @@ export function MilestoneCreate() {
       {showModal &&
         createPortal(
           <Modal title={'Создать этап'} onClose={() => setShowModal(false)}>
-            <div>data: {showModal}</div>
+            <div>
+              <Label required>Заголовок</Label>
+              <Input placeholder='Заголовок' />
+            </div>
           </Modal>,
           document.body,
         )}

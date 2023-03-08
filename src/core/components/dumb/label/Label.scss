@@ -1,0 +1,13 @@
+label {
+  display: flex;
+  font-weight: 400;
+  margin-bottom: 7px;
+  &.required {
+    &::after{
+        content: '*';
+        position: relative;
+        left: 3px;
+        color: var(--danger);
+      }
+  }
+}
