@@ -3,7 +3,7 @@ import './Milestones.scss';
 import { Milestone } from '../../dumb/milestone/Milestone';
 import * as Model from '../../../models/Milestone';
 import { getMilestones } from '../../../api/Api';
-import { MilestoneCreate } from '../milestone-create/Milestone-create';
+import { MilestoneCreate } from '../milestoneСreate/MilestoneСreate';
 
 type MilestonesState = {
   loading: boolean;

@@ -1,16 +1,14 @@
 .pm-input {
   position: relative;
-  display: inline-block;
   padding: 7px 10px;
-  min-width: 0;
+  width: 100%;
   background-color: var(--background-color);
-  background-image: none;
-  border: 1px solid #d9d9d9;
-  border-style: solid;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   color: var(--text-color);
   outline: none;
-  font-size: 1em;
+  font-size: 16px;
+  box-sizing: border-box;
   transition: all 0.3s;
 
   &:hover,

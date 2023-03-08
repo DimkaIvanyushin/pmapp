@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Milestone.scss';
 import { Progress } from '../progress/Progress';
 import { Avatar } from '../avatar/Avatar';
-import { AvatarGroup } from '../avatar-group/AvatarGroup';
+import { AvatarGroup } from '../avatarGroup/AvatarGroup';
 import iconPlus from '../../../../assets/images/plus.svg';
 import * as Model from '../../../models/Milestone';
 import { User } from '../../../models/User';

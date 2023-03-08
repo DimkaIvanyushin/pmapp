@@ -1,10 +1,12 @@
 import React from 'react';
 import './Input.scss';
 
-type InputProps = {
+export type InputProps = {
+  name?: string;
   placeholder?: string;
 };
 
-export function Input({ placeholder }: InputProps) {
-  return <input className='pm-input' type='text' placeholder={placeholder} />;
+export function Input({ placeholder, name }: InputProps) {
+  return <input name={name} className='pm-input' type='text' placeholder={placeholder} />;
 }
+

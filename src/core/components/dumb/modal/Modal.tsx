@@ -23,10 +23,6 @@ export function Modal({ title, children, onClose, onOk }: ModalProps) {
       case 'Escape':
         onClose();
         break;
-
-      case 'Enter':
-        onOk?.();
-        break;
     }
   }
 
