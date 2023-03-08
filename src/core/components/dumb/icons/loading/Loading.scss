@@ -1,0 +1,19 @@
+.loadIcon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  animation: loadingCircle 1s infinite linear;
+  text-rendering: optimizeLegibility;
+
+  @keyframes loadingCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

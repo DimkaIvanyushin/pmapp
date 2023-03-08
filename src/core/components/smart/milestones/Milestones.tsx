@@ -3,6 +3,7 @@ import './Milestones.scss';
 import { Milestone } from '../../dumb/milestone/Milestone';
 import * as Model from '../../../models/Milestone';
 import { getMilestones } from '../../../api/Api';
+import { MilestoneCreate } from '../milestone-create/Milestone-create';
 
 type MilestonesState = {
   loading: boolean;
@@ -28,8 +29,8 @@ export const Milestones = () => {
 
   return (
     <div className='milestones'>
-      <Milestone type='create' />
-
+      <MilestoneCreate></MilestoneCreate>
+  
       {milestonesState.milestones.map((milestone) => (
         <Milestone key={milestone.id} milestone={milestone} />
       ))}

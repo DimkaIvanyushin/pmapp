@@ -1,0 +1,51 @@
+button.pm-button {
+  padding: 7px 15px;
+  border-radius: 6px;
+  box-shadow: none;
+  border: none;
+  font-size: 1em;
+  color: var(--text-color);
+  transition: color 0.3s ease, border 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    transition: color 0.3s ease, border 0.3s ease, background-color 0.3s ease;
+  }
+
+  &.default {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+
+    &:hover {
+      border: 1px solid var(--active-color);
+      color: var(--active-color);
+    }
+  }
+
+  &.primary {
+    color: #fff;
+    background-color: var(--active-color);
+    border: 1px solid var(--active-color);
+
+    &:hover {
+      background-color: #0379ff;
+      border-color: #0379ff;
+    }
+  }
+
+  &.danger {
+    color: #fff;
+    background-color: var(--danger);
+    border: 1px solid var(--danger);
+  }
+
+  &.disabled {
+    opacity: 0.65;
+    cursor: no-drop;
+  }
+
+  .pm-icon {
+    margin-right: 7px;
+    height: 5px;
+  }
+}

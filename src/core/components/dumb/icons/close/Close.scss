@@ -1,0 +1,23 @@
+.closeIcon {
+  padding: 5px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+
+  svg {
+    fill: var(--text-color);
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.88);
+    background-color: rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    svg {
+      fill: var(--active-color);
+      transition: fill 0.3s ease;
+    }
+  }
+}
