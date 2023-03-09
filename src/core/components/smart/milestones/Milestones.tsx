@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Milestones.scss';
-import { Milestone } from '../../dumb/milestone/Milestone';
+import { Milestone } from '../milestone/Milestone';
 import * as Model from '../../../models/Milestone';
 import { getMilestones } from '../../../api/Api';
 import { MilestoneCreate } from '../milestoneСreate/MilestoneCreate';

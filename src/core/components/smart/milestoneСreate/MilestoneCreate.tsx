@@ -6,7 +6,7 @@ import { TextArea } from '../../dumb/input/TextArea';
 import { FormGroup } from '../../dumb/forms/FormGroup';
 import { DatePicker } from '../../dumb/input/DatePicker';
 import { Row } from '../../dumb/layout/Row';
-import { CreateMilestone } from '../../dumb/milestone/CreateMilestone';
+import { CreateMilestone } from '../milestone/CreateMilestone';
 import './MilestoneCreate.scss';
 
 export function MilestoneCreate() {
