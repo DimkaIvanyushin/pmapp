@@ -1,53 +1,49 @@
 import React, { useEffect, useState } from 'react';
-import './Milestone.scss';
 import { Progress } from '../progress/Progress';
 import { Avatar } from '../avatar/Avatar';
 import { AvatarGroup } from '../avatarGroup/AvatarGroup';
-import iconPlus from '../../../../assets/images/plus.svg';
 import * as Model from '../../../models/Milestone';
 import { User } from '../../../models/User';
 import { Issue } from '../../../models/Issue';
 import { Collapse } from '../collapse/Collapse';
 import { Boards } from '../boards/Boards';
 import { Board } from '../board/Board';
+import { getIssues } from '../../../api/Api';
+import './Milestone.scss';
 
 type MilestoneProps = {
-  type?: 'create' | 'default';
-  milestone?: Model.Milestone;
-};
-
-type MilstoneHeaderProps = {
-  closedIssue: Issue[];
+  projectId: number;
   milestone: Model.Milestone;
 };
 
-export function Milestone({ milestone, type = 'default' }: MilestoneProps) {
-  if (type === 'create' && !milestone) {
-    return (
-      <div className='milestone-header create'>
-        <div className='milestone-header-first'>
-          <img src={iconPlus} alt='icon' />
-          <span className='title'>Создать новый этап</span>
-        </div>
-      </div>
-    );
-  }
-  if (!milestone) return <div>Этапа нет!</div>;
+type MilestoneHeaderProps = {
+  issues: Issue[];
+  milestone: Model.Milestone;
+};
 
-  const issues = milestone?.issues || [];
-  const closedIssue = issues.filter((issue) => issue.state === 'closed');
+export function Milestone({ milestone, projectId }: MilestoneProps) {
+  const [issues, setIssues] = useState<Issue[]>([]);
+
+  useEffect(() => {
+    getIssues(projectId, milestone.id).then((response) => {
+      setIssues(response.data);
+    });
+  }, [milestone]);
 
   return (
     <Collapse>
-      <MilestoneHeader closedIssue={closedIssue} milestone={milestone} />
-      <MilestoneBody milestone={milestone} />
+      <MilestoneHeader issues={issues} milestone={milestone} />
+      <MilestoneBody issues={issues} />
     </Collapse>
   );
 }
 
-function MilestoneHeader({ closedIssue, milestone }: MilstoneHeaderProps) {
-  const percent = (closedIssue.length / milestone.issues.length) * 100;
-  const assignees = getUniqUsers(milestone.issues);
+
+export function MilestoneHeader({ issues, milestone }: MilestoneHeaderProps) {
+  const closedIssue = issues.filter((issue) => issue.state === 'closed');
+
+  const percent = (closedIssue.length / issues.length) * 100;
+  const assignees = getUniqUsers(issues);
   const usersAvatar = assignees.map((user) => <Avatar key={user.id} src={user.avatar_url} />);
 
   return (
@@ -57,19 +53,19 @@ function MilestoneHeader({ closedIssue, milestone }: MilstoneHeaderProps) {
         <span className='title'>{milestone?.title}</span>
       </div>
       <div className='milestone-header-last'>
-        <AvatarGroup>{usersAvatar}</AvatarGroup>
+        <AvatarGroup max={3}>{usersAvatar}</AvatarGroup>
         <Progress percent={percent}>
-          <TasksLabel close={closedIssue.length} all={milestone.issues.length} />
+          <TasksLabel close={closedIssue.length} all={issues.length} />
         </Progress>
       </div>
     </div>
   );
 }
 
-function MilestoneBody({ milestone }: { milestone: Model.Milestone }) {
-  const openIssues = milestone.issues.filter((issue) => issue.labels.includes('To Do'));
-  const testsIssues = milestone.issues.filter((issue) => issue.labels.includes('Testing'));
-  const closedIssues = milestone.issues.filter((issue) => issue.state === 'closed');
+function MilestoneBody({ issues }: { issues: Issue[] }) {
+  const openIssues = issues.filter((issue) => issue.labels.includes('To Do'));
+  const testsIssues = issues.filter((issue) => issue.labels.includes('Testing'));
+  const closedIssues = issues.filter((issue) => issue.state === 'closed');
 
   return (
     <div className='milestone-body'>

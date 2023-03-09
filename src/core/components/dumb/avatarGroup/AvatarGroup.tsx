@@ -8,7 +8,7 @@ type AvatarGroupProps = {
 };
 
 export const AvatarGroup = ({ children, max = 3 }: AvatarGroupProps) => {
-  const isMore = children.length >= max;
+  const isMore = children.length > max;
   return (
     <div className='avatar-group'>
       {children.slice(0, max)}{' '}
@@ -16,7 +16,3 @@ export const AvatarGroup = ({ children, max = 3 }: AvatarGroupProps) => {
     </div>
   );
 };
-
-// const countView = 3;
-//   const avatars = children.slice(0, countView);
-//   return <div>{avatars} +{children.length - countView}</div>;

@@ -10,5 +10,4 @@ export interface Milestone extends Ids {
   updated_at: string | Date;
   due_date: string | Date;
   start_date: string | Date;
-  issues: Issue[];
 }

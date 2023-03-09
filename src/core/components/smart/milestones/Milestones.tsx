@@ -3,26 +3,29 @@ import './Milestones.scss';
 import { Milestone } from '../../dumb/milestone/Milestone';
 import * as Model from '../../../models/Milestone';
 import { getMilestones } from '../../../api/Api';
-import { MilestoneCreate } from '../milestoneСreate/MilestoneСreate';
+import { MilestoneCreate } from '../milestoneСreate/MilestoneCreate';
 
 type MilestonesState = {
   loading: boolean;
   milestones: Model.Milestone[];
 };
 
-export const Milestones = () => {
+type MilestonesProps = {
+  projectId: number;
+};
+
+export function Milestones({ projectId }: MilestonesProps) {
   const [milestonesState, setMilestones] = useState<MilestonesState>({
     loading: false,
     milestones: [],
   });
 
   useEffect(() => {
-    return () => {
-      setMilestones({ ...milestonesState, loading: true });
-      getMilestones(1).then(({ data }) => {
-        setMilestones({ loading: false, milestones: data });
-      });
-    };
+    setMilestones({ ...milestonesState, loading: true });
+
+    getMilestones(projectId).then(({ data: milestones }) => {
+      setMilestones({ loading: false, milestones });
+    });
   }, []);
 
   if (!milestonesState || milestonesState.milestones.length === 0) return <p>Нет данных.</p>;
@@ -30,10 +33,9 @@ export const Milestones = () => {
   return (
     <div className='milestones'>
       <MilestoneCreate></MilestoneCreate>
-  
       {milestonesState.milestones.map((milestone) => (
-        <Milestone key={milestone.id} milestone={milestone} />
+        <Milestone key={milestone.id} milestone={milestone} projectId={projectId} />
       ))}
     </div>
   );
-};
+}

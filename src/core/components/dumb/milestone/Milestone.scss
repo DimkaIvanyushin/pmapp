@@ -6,6 +6,8 @@
   border-radius: 6px;
   border: 1px solid var(--border-color);
   background-color: var(--background-color-list);
+  box-sizing: border-box;
+  height: 76px;
   transition: 0.4s ease;
 
   &.create {

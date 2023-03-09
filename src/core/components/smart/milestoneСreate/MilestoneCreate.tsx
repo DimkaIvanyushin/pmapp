@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Modal } from '../../dumb/modal/Modal';
 import { createPortal } from 'react-dom';
-import { Milestone } from '../../dumb/milestone/Milestone';
 import { Label } from '../../dumb/label/Label';
 import { TextArea } from '../../dumb/input/TextArea';
 import { FormGroup } from '../../dumb/forms/FormGroup';
 import { DatePicker } from '../../dumb/input/DatePicker';
-import './MilestoneСreate.scss';
 import { Row } from '../../dumb/layout/Row';
+import { CreateMilestone } from '../../dumb/milestone/CreateMilestone';
+import './MilestoneCreate.scss';
 
 export function MilestoneCreate() {
   const [showModal, setShowModal] = useState(false);
@@ -15,7 +15,7 @@ export function MilestoneCreate() {
   return (
     <div className='milestone-create'>
       <div className='milesone-create-button' onClick={() => setShowModal(true)}>
-        <Milestone type='create' />
+        <CreateMilestone />
       </div>
 
       {showModal &&
