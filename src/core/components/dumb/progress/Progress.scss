@@ -1,25 +1,38 @@
 .progress-container {
+  position: relative;
   height: 10px;
-  width: 250px;
+  width: 300px;
   background-color: var(--border-color);
   border-radius: 5px;
 
   .progress {
-    background-color: var(--active-color);
+    position: absolute;
+    left: 0;
+    top: 0;
     height: inherit;
     border-radius: inherit;
+    height: 10px;
 
     &.complete {
       background-color: var(--success);
+      z-index: 2;
+    }
+
+    &.extra-percent {
+      background-color: var(--active-color);
+      z-index: 1;
     }
   }
 
   .description {
     display: flex;
     justify-content: space-between;
-    margin-top: 4px;
+    margin-top: 15px;
     font-weight: 400;
     font-size: 0.8em;
+
+    .percent {
+      margin-left: 15px;
+    }
   }
 }
-

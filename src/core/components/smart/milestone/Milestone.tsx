@@ -10,6 +10,7 @@ import { Boards } from '../../dumb/boards/Boards';
 import { Board } from '../../dumb/board/Board';
 import { getIssues } from '../../../api/Api';
 import './Milestone.scss';
+import { getLocalDateString } from '../../../src/Utils';
 
 type MilestoneProps = {
   projectId: number;
@@ -57,7 +58,8 @@ export function MilestoneHeader({
   milestone,
 }: MilestoneHeaderProps) {
   const allIssues = [...closedIssues, ...openIssues, ...testsIssues];
-  const percent = Math.round((closedIssues.length / allIssues.length || 0) * 100);
+  const percent = getPercent(closedIssues.length, allIssues.length);
+  const extraPercent = getPercent(testsIssues.length + closedIssues.length, allIssues.length);
   const assignees = useMemo(() => getUniqUsers(allIssues), [allIssues]);
   const usersAvatar = assignees.map((user) => <Avatar key={user.id} src={user.avatar_url} />);
 
@@ -65,11 +67,17 @@ export function MilestoneHeader({
     <div className='milestone-header'>
       <div className='milestone-header-first'>
         <span className='title'>{milestone?.title}</span>
+
+        <span>
+        {milestone?.start_date && `с: ${getLocalDateString(milestone.start_date)} `}
+        &nbsp;
+        {milestone?.due_date && `по: ${getLocalDateString(milestone.due_date)}`}
+      </span>
       </div>
       <div className='milestone-header-last'>
         <AvatarGroup max={3}>{usersAvatar}</AvatarGroup>
-        <Progress percent={percent}>
-          <TasksLabel close={closedIssues.length} all={allIssues.length} />
+        <Progress percent={percent} extraPercent={extraPercent}>
+          <TasksLabel milestone={milestone} close={closedIssues.length} all={allIssues.length} />
         </Progress>
       </div>
     </div>
@@ -92,15 +100,31 @@ function MilestoneBody({
   );
 }
 
-function TasksLabel({ close, all }: { close: number; all: number }) {
+function TasksLabel({
+  milestone,
+  close,
+  all,
+}: {
+  milestone: Model.Milestone;
+  close: number;
+  all: number;
+}) {
   return (
-    <span>
-      Задачи:&nbsp;
-      <span className='bold'>
-        {close}/{all}
+    <div className='tasks-label'>
+      <span>
+        Задачи:&nbsp;
+        <span className='bold'>
+          {close}/{all}
+        </span>
       </span>
-    </span>
+
+     
+    </div>
   );
+}
+
+function getPercent(a: number, b: number): number {
+  return Math.round((a / b || 0) * 100);
 }
 
 function getUniqUsers(issues: Issue[]): User[] {

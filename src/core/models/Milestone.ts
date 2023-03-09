@@ -1,5 +1,4 @@
 import { Ids } from './Ids';
-import { Issue } from './Issue';
 
 export interface Milestone extends Ids {
   project_id: number;
@@ -8,6 +7,6 @@ export interface Milestone extends Ids {
   state: 'active';
   created_at: string | Date;
   updated_at: string | Date;
-  due_date: string | Date;
-  start_date: string | Date;
+  due_date: string;
+  start_date: string;
 }
