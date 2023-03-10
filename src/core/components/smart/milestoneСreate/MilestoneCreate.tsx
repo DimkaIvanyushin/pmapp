@@ -24,7 +24,7 @@ export function MilestoneCreate() {
             <form>
               <FormGroup>
                 <Label required>Заголовок</Label>
-                <TextArea name='title' rows={3} />
+                <TextArea name='title' rows={3} autofocus={true} />
               </FormGroup>
               <FormGroup>
                 <Label required>Описание</Label>
