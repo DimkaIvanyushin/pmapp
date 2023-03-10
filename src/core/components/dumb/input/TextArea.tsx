@@ -7,15 +7,16 @@ type TextAreaProps = {
   rows?: number;
 } & InputProps;
 
-export function TextArea({ placeholder, name, rows = 3, autofocus }: TextAreaProps) {
-  const inputElement = useAutoFocus<HTMLTextAreaElement>(autofocus || false);
-
+export function TextArea(props: TextAreaProps) {
+  const inputElement = useAutoFocus<HTMLTextAreaElement>(props.autofocus || false);
   return (
     <textarea
-      rows={rows}
-      name={name}
+      rows={props?.rows ?? 3}
+      name={props.name}
+      defaultValue={props?.defaultValue}
+      required={props.required}
       className='pm-input'
-      placeholder={placeholder}
+      placeholder={props.placeholder}
       ref={inputElement}
     />
   );

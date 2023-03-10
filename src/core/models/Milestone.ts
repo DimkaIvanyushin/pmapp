@@ -5,8 +5,8 @@ export interface Milestone extends Ids {
   title: string;
   description: string;
   state: 'active';
-  created_at: string | Date;
-  updated_at: string | Date;
+  created_at: string;
+  updated_at: string;
   due_date: string;
   start_date: string;
 }

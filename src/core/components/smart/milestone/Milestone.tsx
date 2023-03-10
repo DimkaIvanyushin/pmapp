@@ -11,9 +11,9 @@ import { Board } from '../../dumb/board/Board';
 import { getIssues } from '../../../api/Api';
 import { getLocalDateString } from '../../../src/Utils';
 import { DateIcon } from '../../dumb/icons/date/Date';
-import './Milestone.scss';
 import { LoadingIcon } from '../../dumb/icons/loading/Loading';
-import { Tooltip } from '../../dumb/tooltip/Tooltip';
+import iconPlus from '../../../../assets/images/plus.svg';
+import './Milestone.scss';
 
 type MilestoneProps = {
   projectId: number;
@@ -30,6 +30,10 @@ type MilestoneBodyProps = {
   openIssues: Issue[];
   testsIssues: Issue[];
   closedIssues: Issue[];
+};
+
+type CreateMilestoneProps = {
+  onClick: () => void;
 };
 
 export function Milestone({ milestone, projectId }: MilestoneProps) {
@@ -60,6 +64,18 @@ export function Milestone({ milestone, projectId }: MilestoneProps) {
     </Collapse>
   );
 }
+
+export function CreateMilestone({ onClick }: CreateMilestoneProps) {
+  return (
+    <div className='milestone-header create' onClick={onClick}>
+      <div className='milestone-header-first'>
+        <img src={iconPlus} alt='icon' />
+        <span className='title'>Создать новый этап</span>
+      </div>
+    </div>
+  );
+}
+
 
 export function MilestoneHeader({
   issues: { closedIssues = [], openIssues = [], testsIssues = [] },
