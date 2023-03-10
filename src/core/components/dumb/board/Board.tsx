@@ -3,7 +3,7 @@ import './Board.scss';
 import { Issue } from '../../../models/Issue';
 import { Card } from '../card/Card';
 import cardsImage from '../../../../assets/images/cards.svg';
-import { Empty } from '../emptry/Empty';
+import { Empty } from '../empty/Empty';
 
 type BoardProps = {
   issues: Issue[];

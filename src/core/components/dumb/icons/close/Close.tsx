@@ -7,7 +7,7 @@ type CloseIconProps = {
 
 export function CloseIcon({ onClick }: CloseIconProps) {
   return (
-    <div className='closeIcon pm-icon' onClick={onClick}>
+    <div className='close-icon pm-icon' onClick={onClick}>
       <svg
         viewBox='64 64 896 896'
         focusable='false'

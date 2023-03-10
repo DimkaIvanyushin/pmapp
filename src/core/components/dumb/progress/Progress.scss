@@ -13,6 +13,9 @@
     border-radius: inherit;
     height: 10px;
 
+    transition: width .3s ease-in;
+
+
     &.complete {
       background-color: var(--success);
       z-index: 2;

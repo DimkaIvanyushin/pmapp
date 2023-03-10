@@ -9,8 +9,11 @@ import { Collapse } from '../../dumb/collapse/Collapse';
 import { Boards } from '../../dumb/boards/Boards';
 import { Board } from '../../dumb/board/Board';
 import { getIssues } from '../../../api/Api';
-import './Milestone.scss';
 import { getLocalDateString } from '../../../src/Utils';
+import { DateIcon } from '../../dumb/icons/date/Date';
+import './Milestone.scss';
+import { LoadingIcon } from '../../dumb/icons/loading/Loading';
+import { Tooltip } from '../../dumb/tooltip/Tooltip';
 
 type MilestoneProps = {
   projectId: number;
@@ -20,6 +23,7 @@ type MilestoneProps = {
 type MilestoneHeaderProps = {
   issues: MilestoneBodyProps;
   milestone: Model.Milestone;
+  isLoading?: boolean;
 };
 
 type MilestoneBodyProps = {
@@ -30,9 +34,13 @@ type MilestoneBodyProps = {
 
 export function Milestone({ milestone, projectId }: MilestoneProps) {
   const [issues, setIssues] = useState<Issue[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    getIssues(projectId, milestone.id).then((response) => setIssues(response.data));
+    setIsLoading(true);
+    getIssues(projectId, milestone.id)
+      .then((response) => setIssues(response.data))
+      .finally(() => setIsLoading(false));
   }, [milestone]);
 
   const issuesProps = useMemo(() => {
@@ -47,7 +55,7 @@ export function Milestone({ milestone, projectId }: MilestoneProps) {
 
   return (
     <Collapse>
-      <MilestoneHeader issues={issuesProps} milestone={milestone} />
+      <MilestoneHeader issues={issuesProps} milestone={milestone} isLoading={isLoading} />
       <MilestoneBody issues={issuesProps} />
     </Collapse>
   );
@@ -56,6 +64,7 @@ export function Milestone({ milestone, projectId }: MilestoneProps) {
 export function MilestoneHeader({
   issues: { closedIssues = [], openIssues = [], testsIssues = [] },
   milestone,
+  isLoading,
 }: MilestoneHeaderProps) {
   const allIssues = [...closedIssues, ...openIssues, ...testsIssues];
   const percent = getPercent(closedIssues.length, allIssues.length);
@@ -66,13 +75,11 @@ export function MilestoneHeader({
   return (
     <div className='milestone-header'>
       <div className='milestone-header-first'>
-        <span className='title'>{milestone?.title}</span>
-
-        <span>
-        {milestone?.start_date && `с: ${getLocalDateString(milestone.start_date)} `}
-        &nbsp;
-        {milestone?.due_date && `по: ${getLocalDateString(milestone.due_date)}`}
-      </span>
+        <span className='title'>{isLoading ? <LoadingIcon /> : milestone?.title}</span>
+        <span className='date'>
+          <DateLabel date={milestone?.start_date} tooltip='Начало' />
+          <DateLabel date={milestone?.start_date} tooltip='Окончание' type='end' />
+        </span>
       </div>
       <div className='milestone-header-last'>
         <AvatarGroup max={3}>{usersAvatar}</AvatarGroup>
@@ -100,15 +107,7 @@ function MilestoneBody({
   );
 }
 
-function TasksLabel({
-  milestone,
-  close,
-  all,
-}: {
-  milestone: Model.Milestone;
-  close: number;
-  all: number;
-}) {
+function TasksLabel({ close, all }: { milestone: Model.Milestone; close: number; all: number }) {
   return (
     <div className='tasks-label'>
       <span>
@@ -117,10 +116,22 @@ function TasksLabel({
           {close}/{all}
         </span>
       </span>
-
-     
     </div>
   );
+}
+
+function DateLabel({
+  date,
+  tooltip: text,
+  type,
+}: {
+  date: string;
+  tooltip?: string;
+  type?: 'start' | 'end';
+}) {
+  if (!date) return <span></span>;
+  // <Tooltip text={text}>
+  return <DateIcon text={getLocalDateString(date)} type={type} />;
 }
 
 function getPercent(a: number, b: number): number {

@@ -1,0 +1,41 @@
+.tooltip-container {
+  position: relative;
+  z-index: 10;
+  
+  .tooltip {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+
+    .message {
+      padding: 4px 15px;
+      color: #fff;
+      text-decoration: none;
+      word-wrap: break-word;
+      background-color: #383838;
+      border-radius: 6px;
+      box-shadow: 0 6px 16px 0 rgb(0, 0, 0, 0.8%), 0 3px 6px -4px rgb(0, 0, 0, 0.12%),
+        0 9px 28px 8px rgb(0, 0, 0, 0.5%);
+      font-size: 0.9em;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: calc(50% - 6px);
+        bottom: -16px;
+        border: 6px solid transparent;
+        border-top: 6px solid #383838;
+      }
+    }
+  }
+}

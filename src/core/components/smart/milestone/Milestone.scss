@@ -16,6 +16,17 @@
     background-color: var(--active-color-background);
     border-style: border;
     border-width: 2px;
+
+    img {
+      transition: all 0.2s ease-out;
+    }
+
+    &:hover {
+      img {
+        transform: rotate(180deg);
+        transition: all 0.2s ease-in;
+      }
+    }
   }
 
   &:hover {
@@ -28,20 +39,38 @@
   &-last {
     display: flex;
     align-items: center;
+    flex: 1;
+
+    .pm-icon img {
+      height: 15px;
+    }
 
     & > img {
-      width: 30px;
-      height: 30px;
+      width: 23px;
+      height: 23px;
     }
 
     & > span.title {
       margin-left: 10px;
+      font-weight: 500;
     }
 
-    .tasks-label{
+    & > span.date {
+      display: flex;
+      margin-left: auto;
+
+      & > * {
+        margin-right: 15px;
+      }
+    }
+
+    .tasks-label {
       display: flex;
     }
+  }
 
+  .progress-container {
+    margin-left: auto;
   }
 
   .avatar-group {

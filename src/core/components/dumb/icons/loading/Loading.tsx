@@ -3,7 +3,7 @@ import './Loading.scss';
 
 export function LoadingIcon() {
   return (
-    <div className='loadIcon pm-icon'>
+    <div className='load-icon pm-icon'>
       <svg
         viewBox='0 0 1024 1024'
         focusable='false'

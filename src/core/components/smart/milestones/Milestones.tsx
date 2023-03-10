@@ -4,6 +4,7 @@ import { Milestone } from '../milestone/Milestone';
 import * as Model from '../../../models/Milestone';
 import { getMilestones } from '../../../api/Api';
 import { MilestoneCreate } from '../milestoneСreate/MilestoneCreate';
+import { Empty } from '../../dumb/empty/Empty';
 
 type MilestonesState = {
   loading: boolean;
@@ -28,7 +29,7 @@ export function Milestones({ projectId }: MilestonesProps) {
     });
   }, []);
 
-  if (!milestonesState || milestonesState.milestones.length === 0) return <p>Нет данных.</p>;
+  if (!milestonesState || milestonesState.milestones.length === 0) return <Empty text='Нет данных'/>;
 
   return (
     <div className='milestones'>
