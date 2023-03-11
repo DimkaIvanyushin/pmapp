@@ -7,6 +7,18 @@ export type DatePickerProps = {
   max?: string;
 } & InputProps;
 
-export function DatePicker({ name, min, max }: DatePickerProps) {
-  return <input name={name} className='pm-input' type='date' id='start' min={min} max={max} />;
+export function DatePicker(props: DatePickerProps) {
+  return (
+    <input
+      name={props.name}
+      className='pm-input'
+      type='date'
+      id='start'
+      value={props.value}
+      onChange={props.onChange}
+      min={props.min}
+      max={props.max}
+      defaultValue={props.defaultValue}
+    />
+  );
 }

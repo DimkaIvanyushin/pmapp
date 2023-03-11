@@ -5,12 +5,13 @@ import { CloseIcon } from '../icons/close/Close';
 
 type ModalProps = {
   children: JSX.Element;
-  title?: string | null;
-  onClose: () => void;
+  title: string | null;
+  footer?: boolean;
+  onClose?: () => void;
   onOk?: () => Promise<void>;
 };
 
-export function Modal({ title, children, onClose, onOk }: ModalProps) {
+export function Modal({ title, children, footer = true, onClose, onOk }: ModalProps) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ export function Modal({ title, children, onClose, onOk }: ModalProps) {
   function handleEsc(event: KeyboardEvent) {
     switch (event.key) {
       case 'Escape':
-        onClose();
+        onClose?.();
         break;
     }
   }
@@ -44,12 +45,14 @@ export function Modal({ title, children, onClose, onOk }: ModalProps) {
           </div>
         )}
         <div className='body'>{children}</div>
-        <div className='footer'>
-          <Button onClick={onClose}>Отмена</Button>
-          <Button onClick={okHandler} type='primary' loading={isLoading}>
-            Создать
-          </Button>
-        </div>
+        {footer && (
+          <div className='footer'>
+            <Button onClick={onClose}>Отмена</Button>
+            <Button onClick={okHandler} type='primary' loading={isLoading}>
+              Создать
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

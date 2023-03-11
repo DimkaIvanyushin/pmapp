@@ -1,13 +1,10 @@
 import React from 'react';
+import './FormGroup.scss';
 
 type FormGroupProps = {
   children: JSX.Element[] | JSX.Element;
 };
 
 export function FormGroup({ children }: FormGroupProps) {
-  const styleFormGroup = {
-    marginBottom: '15px',
-    width: '100%',
-  };
-  return <div style={styleFormGroup}>{children}</div>;
+  return <div className='form-group'>{children}</div>;
 }

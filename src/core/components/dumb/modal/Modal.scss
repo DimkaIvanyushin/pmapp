@@ -33,22 +33,22 @@
       margin-bottom: 10px;
       font-weight: 500;
       font-size: 1em;
-      
-      .close{
+
+      .close {
         font-size: 1.2em;
         font-weight: 400;
       }
     }
 
-    .footer{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin-top: 10px;
+    .footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 10px;
 
-        & > * {
-            margin-left: 10px;
-        }
+      & > * {
+        margin-left: 10px;
+      }
     }
   }
 }

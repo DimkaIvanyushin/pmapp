@@ -6,8 +6,10 @@ export type InputProps = {
   name?: string;
   placeholder?: string;
   autofocus?: boolean;
+  value?: string;
   required?: boolean;
   defaultValue?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement  | HTMLTextAreaElement>;
 };
 
 export function Input(props: InputProps) {
@@ -15,7 +17,9 @@ export function Input(props: InputProps) {
 
   return (
     <input
+      onChange={props.onChange}
       name={props.name}
+      value={props.value}
       required={props.required}
       defaultValue={props?.defaultValue}
       className='pm-input'

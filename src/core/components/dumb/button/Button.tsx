@@ -7,7 +7,7 @@ type ButtonProps = {
   type?: 'primary' | 'default' | 'danger';
   loading?: boolean;
   disabled?: boolean;
-  onClick?: () => Promise<void> | void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => Promise<void> | void;
 };
 
 export function Button({ children, type = 'default', loading, disabled, onClick }: ButtonProps) {

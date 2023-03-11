@@ -11,6 +11,8 @@ export function TextArea(props: TextAreaProps) {
   const inputElement = useAutoFocus<HTMLTextAreaElement>(props.autofocus || false);
   return (
     <textarea
+      onChange={props?.onChange}
+      value={props?.value}
       rows={props?.rows ?? 3}
       name={props.name}
       defaultValue={props?.defaultValue}
