@@ -2,13 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 76px;
   padding: 20px;
   border-radius: 6px;
   border: 1px solid var(--border-color);
   background-color: var(--background-color-list);
   box-sizing: border-box;
-  height: 76px;
+  overflow: hidden;
   transition: 0.4s ease;
+
+  &.closed{
+    border-color: var(--success);
+  }
 
   &.create {
     position: relative;
@@ -33,13 +38,19 @@
     cursor: pointer;
     border-color: var(--active-color);
     transition: 0.4s ease;
+
+    &:not(.closed) .slider {
+      top: 0;
+    }
   }
 
   &-first,
   &-last {
+    position: relative;
     display: flex;
     align-items: center;
     flex: 1;
+    height: 100%;
 
     .pm-icon img {
       height: 15px;
@@ -88,4 +99,24 @@
 
 .card {
   max-width: 250px;
+}
+
+.slider {
+  position: absolute;
+  top: -59px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+
+  &-slide:first-of-type {
+    margin-bottom: 25px;
+  }
+
+  &-slide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }

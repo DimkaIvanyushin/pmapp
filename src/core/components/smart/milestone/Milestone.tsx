@@ -12,8 +12,10 @@ import { getIssues } from '../../../api/Api';
 import { getLocalDateString, getPercent } from '../../../src/Utils';
 import { DateIcon } from '../../dumb/icons/date/Date';
 import { LoadingIcon } from '../../dumb/icons/loading/Loading';
-import './Milestone.scss';
 import { Button } from '../../dumb/button/Button';
+import { MilestoneState } from '../../../models/Milestone';
+import './Milestone.scss';
+import successIcon from '../../../../assets/images/success.svg';
 
 type MilestoneProps = {
   projectId: number;
@@ -36,7 +38,7 @@ type MilestoneBodyProps = {
 
 export function Milestone({ milestone, projectId, editHandler }: MilestoneProps) {
   const [issues, setIssues] = useState<Issue[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setIsLoading(true);
@@ -88,9 +90,14 @@ export function MilestoneHeader({
     editHandler(milestone);
   }
 
+  function isClosedMilestone(): boolean {
+    return milestone.state === MilestoneState.CLOSED && !isLoading;
+  }
+
   return (
-    <div className='milestone-header'>
+    <div className={`milestone-header ${isClosedMilestone() && 'closed'}`}>
       <div className='milestone-header-first'>
+        {isClosedMilestone() && <img src={successIcon} alt='success' />}
         <span className='title'>{isLoading ? <LoadingIcon /> : milestone?.title}</span>
         <span className='date'>
           <DateLabel date={milestone?.start_date} tooltip='Начало' />
@@ -98,14 +105,23 @@ export function MilestoneHeader({
         </span>
       </div>
       <div className='milestone-header-last'>
-        <Button type='primary' onClick={(e) => editHandlerClick(e, milestone)}>
-          Редактировать
-        </Button>
-
-        <AvatarGroup max={3}>{usersAvatar}</AvatarGroup>
-        <Progress percent={percent} extraPercent={extraPercent}>
-          <TasksLabel milestone={milestone} close={closedIssues.length} all={allIssues.length} />
-        </Progress>
+        <div className='slider'>
+          <div className='slider-slide'>
+            <Button type='primary' onClick={(e) => editHandlerClick(e, milestone)}>
+              Редактировать
+            </Button>
+          </div>
+          <div className='slider-slide'>
+            <AvatarGroup max={3}>{usersAvatar}</AvatarGroup>
+            <Progress percent={percent} extraPercent={extraPercent}>
+              <TasksLabel
+                milestone={milestone}
+                close={closedIssues.length}
+                all={allIssues.length}
+              />
+            </Progress>
+          </div>
+        </div>
       </div>
     </div>
   );
