@@ -14,31 +14,23 @@ import { DateIcon } from '../../dumb/icons/date/Date';
 import { LoadingIcon } from '../../dumb/icons/loading/Loading';
 import { Button } from '../../dumb/button/Button';
 import { MilestoneState } from '../../../models/Milestone';
-import './Milestone.scss';
+import { MilestoneBodyProps, MilestoneHeaderProps, MilestoneProps } from './MilestoneTypes';
 import successIcon from '../../../../assets/images/success.svg';
+import './Milestone.scss';
 
-type MilestoneProps = {
-  projectId: number;
-  milestone: Model.Milestone;
-  editHandler: (milestone: Model.Milestone) => void;
-};
-
-type MilestoneHeaderProps = {
-  issues: MilestoneBodyProps;
-  milestone: Model.Milestone;
-  isLoading?: boolean;
-  editHandler: (milestone: Model.Milestone) => void;
-};
-
-type MilestoneBodyProps = {
-  openIssues: Issue[];
-  testsIssues: Issue[];
-  closedIssues: Issue[];
-};
+const INTERVAL_REFRESH_DATA = 300000;
 
 export function Milestone({ milestone, projectId, editHandler }: MilestoneProps) {
   const [issues, setIssues] = useState<Issue[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => getIssues(projectId, milestone.id).then((response) => setIssues(response.data)),
+      INTERVAL_REFRESH_DATA,
+    );
+    return () => clearInterval(intervalId);
+  }, []);
 
   useEffect(() => {
     setIsLoading(true);
