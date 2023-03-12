@@ -1,32 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Milestone } from '../milestone/Milestone';
 import * as Model from '../../../models/Milestone';
 import { getMilestones } from '../../../api/Api';
-import { createPortal } from 'react-dom';
 import { Modal } from '../../dumb/modal/Modal';
 import { MilestoneCreateForm } from '../milestoneForm/MilestoneForm';
 import { CreateMilestone } from '../milestone/CreateMilestone';
-import './Milestones.scss';
 import * as API from '../../../api/Api';
 import { MilestoneToMilestoneEditRequest } from '../../../src/Adapter';
-import { delay } from '../../../src/Utils';
-
-type MilestonesProps = {
-  projectId: number;
-};
-
-type MilestonesState = {
-  loading?: boolean;
-  milestones: Model.Milestone[];
-};
-
-type MilestoneState = {
-  isVisible: boolean;
-  milestone?: Model.Milestone | null;
-};
+import { Button } from '../../dumb/button/Button';
+import { Pagination } from '../../../models/Pagination';
+import './Milestones.scss';
+import { MilestonesProps, MilestonesState, MilestoneState } from './MilestonesTypes';
 
 export function Milestones({ projectId }: MilestonesProps) {
-  const [milestonesState, setMilestones] = useState<MilestonesState>({
+  const [pagination, setPagination] = useState<Pagination>({ perPage: 5, page: 1 });
+
+  const [milestonesState, setMilestonesState] = useState<MilestonesState>({
     loading: false,
     milestones: [],
   });
@@ -37,48 +27,33 @@ export function Milestones({ projectId }: MilestonesProps) {
   });
 
   useEffect(() => {
-    setMilestones({ ...milestonesState, loading: true });
-    getMilestones(projectId).then(({ data: milestones }) => {
-      setMilestones({ loading: false, milestones });
+    setMilestonesState({ ...milestonesState, loading: true });
+    getMilestones(projectId, pagination).then(({ data: milestones }) => {
+      setMilestonesState({
+        loading: false,
+        milestones: [...milestonesState.milestones, ...milestones],
+      });
     });
-  }, []);
+  }, [pagination]);
 
   function editButtonHandler(milestone: Model.Milestone) {
     setMilestone({ isVisible: true, milestone });
   }
 
   async function editMilestone(projectId: number, milestone: Model.Milestone) {
-    await delay(2000);
-
-    setMilestones({
+    await API.editMilestone(projectId, MilestoneToMilestoneEditRequest(projectId, milestone));
+    setMilestonesState({
       milestones: milestonesState.milestones.map((_milestone) =>
         _milestone.id === milestone.id ? milestone : _milestone,
       ),
     });
     setMilestone({ isVisible: false });
-
-    // API.editMilestone(projectId, MilestoneToMilestoneEditRequest(projectId, milestone)).then(
-    //   (response) => {
-    //     setMilestones({
-    //       milestones: milestonesState.milestones.map((_milestone) =>
-    //         _milestone.id === milestone.id ? milestone : _milestone,
-    //       ),
-    //     });
-    //     setMilestone({ isVisible: false });
-    //   },
-    // );
   }
 
   async function createMilestone(projectId: number, milestone: Model.Milestone) {
-    await delay(2000);
-
-    setMilestones({ milestones: [milestone, ...milestonesState.milestones] });
+    await API.createMilestone(projectId, milestone);
+    setMilestonesState({ milestones: [milestone, ...milestonesState.milestones] });
     setMilestone({ isVisible: false });
-
-    // API.createMilestone(projectId, milestone).then((response) => {
-    //   setMilestones({ milestones: [milestone, ...milestonesState.milestones] });
-    //   setMilestone({ isVisible: false });
-    // });
   }
 
   async function createOrEditMilestone(milestone: Model.Milestone) {
@@ -87,9 +62,22 @@ export function Milestones({ projectId }: MilestonesProps) {
       : await createMilestone(projectId, milestone);
   }
 
+  function onNextPage() {
+    const { page, perPage } = pagination;
+    setPagination({ page: page + 1, perPage });
+  }
+
+  function showModalCreateMIlestone() {
+    setMilestone({ isVisible: true });
+  }
+
+  function hideModalCreateMIlestone() {
+    setMilestone({ isVisible: false });
+  }
+
   return (
     <div className='milestones'>
-      <CreateMilestone onClick={() => setMilestone({ isVisible: true })} />
+      <CreateMilestone onClick={showModalCreateMIlestone} />
       {milestonesState.milestones.map((milestone) => (
         <Milestone
           key={milestone.id}
@@ -99,16 +87,20 @@ export function Milestones({ projectId }: MilestonesProps) {
         />
       ))}
 
+      <div className='milestones-next-button'>
+        <Button onClick={onNextPage}>Показать ещё</Button>
+      </div>
+
       {milestoneState.isVisible &&
         createPortal(
           <Modal
             title={milestoneState.milestone ? 'Редактировать этап' : 'Создать этап'}
-            onClose={() => setMilestone({ isVisible: false })}
+            onClose={hideModalCreateMIlestone}
             footer={false}
           >
             <MilestoneCreateForm
               milestone={milestoneState?.milestone}
-              onCancel={() => setMilestone({ isVisible: false })}
+              onCancel={hideModalCreateMIlestone}
               onOk={createOrEditMilestone}
             />
           </Modal>,

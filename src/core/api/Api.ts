@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Issue } from '../models/Issue';
 import { Milestone } from '../models/Milestone';
 import { MilestoneEditRequest, MilestoneRequest } from '../models/MilestoneRequest';
+import { Pagination } from '../models/Pagination';
 
 const apiUrl = 'http://gitlab.vitebsk.energo.net';
 const token = '-7fdpi5x1xwPy8WWsy-G';
@@ -15,10 +16,17 @@ const config = {
 /**
  * Получить список этапов (спринтов)
  * @param projectId ID проекта
+ * @param { perPage, page } Пагинация
  * @returns milestones[] список этапов
  */
-export function getMilestones(projectId: number): Promise<{ data: Milestone[] }> {
-  return axios.get(`${apiUrl}/api/v4/projects/${projectId}/milestones`, config);
+export function getMilestones(
+  projectId: number,
+  { perPage, page }: Pagination,
+): Promise<{ data: Milestone[] }> {
+  return axios.get(`${apiUrl}/api/v4/projects/${projectId}/milestones`, {
+    params: { per_page: perPage, page },
+    ...config,
+  });
 }
 
 /**
