@@ -9,7 +9,7 @@ import { Collapse } from '../../dumb/collapse/Collapse';
 import { Boards } from '../../dumb/boards/Boards';
 import { Board } from '../../dumb/board/Board';
 import { getIssues } from '../../../api/Api';
-import { getLocalDateString, getPercent } from '../../../src/Utils';
+import { getBusinessDaysCount, getLocalDateString, getPercent } from '../../../src/Utils';
 import { DateIcon } from '../../dumb/icons/date/Date';
 import { LoadingIcon } from '../../dumb/icons/loading/Loading';
 import { Button } from '../../dumb/button/Button';
@@ -63,7 +63,7 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
   );
 }
 
-export function MilestoneHeader({
+function MilestoneHeader({
   issues: { closedIssues = [], openIssues = [], testsIssues = [] },
   milestone,
   isLoading,
@@ -87,6 +87,8 @@ export function MilestoneHeader({
     return milestone.state === MilestoneState.CLOSED && !isLoading;
   }
 
+  const leadTime = getBusinessDaysCount(milestone?.start_date, milestone?.due_date);
+
   return (
     <div className={`milestone-header ${isClosedMilestone() && 'closed'}`}>
       <div className='milestone-header-first'>
@@ -95,6 +97,7 @@ export function MilestoneHeader({
         <span className='date'>
           <DateLabel date={milestone?.start_date} tooltip='Начало' />
           <DateLabel date={milestone?.due_date} tooltip='Окончание' type='end' />
+          {leadTime && <span>(Дней: {leadTime} )</span>}
         </span>
       </div>
       <div className='milestone-header-last'>
@@ -190,7 +193,7 @@ function DateLabel({
   tooltip?: string;
   type?: 'start' | 'end';
 }) {
-  if (!date) return <span></span>;
+  if (!date) return <></>;
   // <Tooltip text={text}>
   return <DateIcon text={getLocalDateString(date)} type={type} />;
 }
