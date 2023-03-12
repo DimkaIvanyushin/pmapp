@@ -49,7 +49,10 @@ export function editMilestone(projectId: number, milestoneRequest: MilestoneEdit
  * @param milestoneRequest Этап
  * @returns
  */
-export function createMilestone(projectId: number, milestoneRequest: MilestoneRequest) {
+export function createMilestone(
+  projectId: number,
+  milestoneRequest: MilestoneRequest,
+): Promise<{data: Milestone}> {
   return axios.post(`${apiUrl}/api/v4/projects/${projectId}/milestones`, milestoneRequest, config);
 }
 

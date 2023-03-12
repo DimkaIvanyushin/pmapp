@@ -51,8 +51,8 @@ export function Milestones({ projectId }: MilestonesProps) {
   }
 
   async function createMilestone(projectId: number, milestone: Model.Milestone) {
-    await API.createMilestone(projectId, milestone);
-    setMilestonesState({ milestones: [milestone, ...milestonesState.milestones] });
+    const responseMilestone = await API.createMilestone(projectId, milestone);
+    setMilestonesState({ milestones: [responseMilestone.data, ...milestonesState.milestones] });
     setMilestone({ isVisible: false });
   }
 
