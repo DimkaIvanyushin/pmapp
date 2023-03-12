@@ -19,3 +19,8 @@ export type MilestoneBodyProps = {
   testsIssues: Issue[];
   closedIssues: Issue[];
 };
+
+export type IssueState = {
+  isVisible: boolean;
+  issue?: Issue;
+}

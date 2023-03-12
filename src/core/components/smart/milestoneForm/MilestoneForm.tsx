@@ -3,6 +3,7 @@ import { Milestone } from '../../../models/Milestone';
 import { Button } from '../../dumb/button/Button';
 import { FormGroup } from '../../dumb/forms/FormGroup';
 import { DatePicker } from '../../dumb/input/DatePicker';
+import { Input } from '../../dumb/input/Input';
 import { TextArea } from '../../dumb/input/TextArea';
 import { Label } from '../../dumb/label/Label';
 import { Row } from '../../dumb/layout/Row';
@@ -46,12 +47,11 @@ export function MilestoneCreateForm({ milestone, onOk, onCancel }: MilestoneCrea
     <form>
       <FormGroup>
         <Label required>Заголовок</Label>
-        <TextArea
+        <Input
           required
           name='title'
           value={milestoneState?.title}
           onChange={(event) => handleInputChange(event.target)}
-          rows={3}
           autofocus={true}
         />
       </FormGroup>

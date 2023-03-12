@@ -12,15 +12,20 @@ type BoardProps = {
 };
 
 export function Board({ issues, title, type }: BoardProps) {
+
+  console.log(issues);
+
   const issuesCard = issues.map((issue) => (
     <Card
       key={issue.id}
       text={issue.title}
-      avatarSrc={issue.assignee.avatar_url}
+      avatarSrc={issue.assignee?.avatar_url}
       id={issue.iid}
       type={type}
     />
   ));
+
+  console.log(issuesCard);
   return (
     <div className='board'>
       <div className='title'>

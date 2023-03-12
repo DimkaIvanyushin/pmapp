@@ -4,7 +4,7 @@ import { Avatar } from '../../dumb/avatar/Avatar';
 import { AvatarGroup } from '../../dumb/avatarGroup/AvatarGroup';
 import * as Model from '../../../models/Milestone';
 import { User } from '../../../models/User';
-import { Issue } from '../../../models/Issue';
+import { Issue, IssueStateEnum } from '../../../models/Issue';
 import { Collapse } from '../../dumb/collapse/Collapse';
 import { Boards } from '../../dumb/boards/Boards';
 import { Board } from '../../dumb/board/Board';
@@ -14,16 +14,28 @@ import { DateIcon } from '../../dumb/icons/date/Date';
 import { LoadingIcon } from '../../dumb/icons/loading/Loading';
 import { Button } from '../../dumb/button/Button';
 import { MilestoneState } from '../../../models/Milestone';
-import { MilestoneBodyProps, MilestoneHeaderProps, MilestoneProps } from './MilestoneTypes';
+import {
+  IssueState,
+  MilestoneBodyProps,
+  MilestoneHeaderProps,
+  MilestoneProps,
+} from './MilestoneTypes';
 import successIcon from '../../../../assets/images/success.svg';
 import './Milestone.scss';
 import { Input } from '../../dumb/input/Input';
+import { createPortal } from 'react-dom';
+import { Modal } from '../../dumb/modal/Modal';
+import { IssueForm } from '../issueForm/IssueForm';
+import * as API from '../../../api/Api';
 
 const INTERVAL_REFRESH_DATA = 300000;
 
 export function Milestone({ milestone, projectId, editHandler }: MilestoneProps) {
   const [issues, setIssues] = useState<Issue[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [issueState, setIssueState] = useState<IssueState>({
+    isVisible: false,
+  });
 
   useEffect(() => {
     const intervalId = setInterval(
@@ -42,24 +54,50 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
 
   const issuesProps = useMemo(() => {
     return {
-      openIssues: issues.filter((issue) => issue.labels.includes('To Do')),
+      openIssues: issues.filter((issue) => issue.state === IssueStateEnum.OPENED),
       testsIssues: issues.filter(
-        (issue) => issue.labels.includes('Testing') && issue.state !== 'closed',
+        (issue) => issue.labels.includes('Testing') && issue.state !== IssueStateEnum.CLOSED,
       ),
-      closedIssues: issues.filter((issue) => issue.state === 'closed'),
+      closedIssues: issues.filter((issue) => issue.state === IssueStateEnum.CLOSED),
     } as MilestoneBodyProps;
   }, [issues]);
 
+  async function createIssue(issue: Issue) {
+    const responseIssue = await API.createIssue(projectId, milestone.id, issue);
+    const ni = [responseIssue.data, ...issues];
+    console.log(ni);
+    setIssues(ni);
+    setIssueState({ isVisible: false });
+  }
+
+  function showModalIssue() {
+    setIssueState({ isVisible: true });
+  }
+
+  function hideModalIssue() {
+    setIssueState({ isVisible: false });
+  }
+
   return (
-    <Collapse>
-      <MilestoneHeader
-        issues={issuesProps}
-        milestone={milestone}
-        editHandler={editHandler}
-        isLoading={isLoading}
-      />
-      <MilestoneBody issues={issuesProps} />
-    </Collapse>
+    <>
+      <Collapse>
+        <MilestoneHeader
+          issues={issuesProps}
+          milestone={milestone}
+          editHandler={editHandler}
+          isLoading={isLoading}
+        />
+        <MilestoneBody issues={issuesProps} onCreateIssue={showModalIssue} />
+      </Collapse>
+
+      {issueState.isVisible &&
+        createPortal(
+          <Modal title='Создать задачу' onClose={hideModalIssue} footer={false}>
+            <IssueForm issue={null} onOk={createIssue} onCancel={hideModalIssue} />
+          </Modal>,
+          document.body,
+        )}
+    </>
   );
 }
 
@@ -124,15 +162,15 @@ function MilestoneHeader({
 }
 
 function MilestoneBody({
-  issues: { closedIssues, openIssues, testsIssues },
+  issues,
+  onCreateIssue,
 }: {
   issues: MilestoneBodyProps;
+  onCreateIssue: () => void;
 }) {
-  const [issuesState, setIssuesState] = useState<MilestoneBodyProps>({
-    closedIssues,
-    openIssues,
-    testsIssues,
-  });
+  let closedIssues = [...issues.closedIssues];
+  let openIssues = [...issues.openIssues];
+  let testsIssues = [...issues.testsIssues];
 
   function onChangeSearch(value: string) {
     function filterIssues(issue: Issue) {
@@ -143,29 +181,32 @@ function MilestoneBody({
     }
 
     if (!value.length) {
-      return setIssuesState({ closedIssues, openIssues, testsIssues });
+      closedIssues = [...issues.closedIssues];
+      openIssues = [...issues.openIssues];
+      testsIssues = [...issues.testsIssues];
+      return;
     }
 
-    return setIssuesState({
-      closedIssues: closedIssues.filter(filterIssues),
-      openIssues: openIssues.filter(filterIssues),
-      testsIssues: testsIssues.filter(filterIssues),
-    });
+    closedIssues = closedIssues.filter(filterIssues);
+    openIssues = openIssues.filter(filterIssues);
+    testsIssues = testsIssues.filter(filterIssues);
   }
 
   return (
     <div className='milestone-body'>
       <div className='controls'>
-        <Button type='primary'>Создать</Button>
+        <Button type='primary' onClick={onCreateIssue}>
+          Создать
+        </Button>
         <Input
           onChange={(event) => onChangeSearch(event.currentTarget.value)}
           placeholder='Поиск'
         ></Input>
       </div>
       <Boards>
-        <Board title='Открытые' issues={issuesState.openIssues} />
-        <Board title='Тестирование' type={'debug'} issues={issuesState.testsIssues} />
-        <Board title='Выполненные' type={'success'} issues={issuesState.closedIssues} />
+        <Board title='Открытые' issues={openIssues} />
+        <Board title='Тестирование' type={'debug'} issues={testsIssues} />
+        <Board title='Выполненные' type={'success'} issues={closedIssues} />
       </Boards>
     </div>
   );
@@ -200,6 +241,6 @@ function DateLabel({
 
 function getUniqUsers(issues: Issue[]): User[] {
   const usersMap = new Map<number, User>();
-  issues.forEach((issue) => usersMap.set(issue.assignee.id, issue.assignee));
+  issues.forEach((issue) => issue.assignee?.id && usersMap.set(issue.assignee.id, issue.assignee));
   return [...usersMap].map(([, value]) => value);
 }

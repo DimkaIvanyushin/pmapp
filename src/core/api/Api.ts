@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { Issue } from '../models/Issue';
 import { Milestone } from '../models/Milestone';
-import { MilestoneEditRequest, MilestoneRequest } from '../models/MilestoneRequest';
 import { Pagination } from '../models/Pagination';
 
 const apiUrl = 'http://gitlab.vitebsk.energo.net';
@@ -35,7 +34,7 @@ export function getMilestones(
  * @param milestoneRequest Этап
  * @returns
  */
-export function editMilestone(projectId: number, milestoneRequest: MilestoneEditRequest) {
+export function editMilestone(projectId: number, milestoneRequest: Milestone) {
   return axios.put(
     `${apiUrl}/api/v4/projects/${projectId}/milestones/${milestoneRequest.id}`,
     milestoneRequest,
@@ -51,8 +50,8 @@ export function editMilestone(projectId: number, milestoneRequest: MilestoneEdit
  */
 export function createMilestone(
   projectId: number,
-  milestoneRequest: MilestoneRequest,
-): Promise<{data: Milestone}> {
+  milestoneRequest: Milestone,
+): Promise<{ data: Milestone }> {
   return axios.post(`${apiUrl}/api/v4/projects/${projectId}/milestones`, milestoneRequest, config);
 }
 
@@ -65,6 +64,24 @@ export function createMilestone(
 export function getIssues(projectId: number, milestoneId: number): Promise<{ data: Issue[] }> {
   return axios.get(
     `${apiUrl}/api/v4/projects/${projectId}/milestones/${milestoneId}/issues?per_page=100`,
+    config,
+  );
+}
+
+/**
+ * Создать задачу
+ * @param projectId ID проекта
+ * @param issue Задача
+ * @returns Созданная задача
+ */
+export function createIssue(
+  projectId: number,
+  milestoneId: number,
+  issue: Issue,
+): Promise<{ data: Issue }> {
+  return axios.post(
+    `${apiUrl}/api/v4/projects/${projectId}/issues`,
+    { milestone_id: milestoneId, ...issue },
     config,
   );
 }

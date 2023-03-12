@@ -7,7 +7,6 @@ import { Modal } from '../../dumb/modal/Modal';
 import { MilestoneCreateForm } from '../milestoneForm/MilestoneForm';
 import { CreateMilestone } from '../milestone/CreateMilestone';
 import * as API from '../../../api/Api';
-import { MilestoneToMilestoneEditRequest } from '../../../src/Adapter';
 import { Button } from '../../dumb/button/Button';
 import { Pagination } from '../../../models/Pagination';
 import './Milestones.scss';
@@ -41,7 +40,7 @@ export function Milestones({ projectId }: MilestonesProps) {
   }
 
   async function editMilestone(projectId: number, milestone: Model.Milestone) {
-    await API.editMilestone(projectId, MilestoneToMilestoneEditRequest(projectId, milestone));
+    await API.editMilestone(projectId, milestone);
     setMilestonesState({
       milestones: milestonesState.milestones.map((_milestone) =>
         _milestone.id === milestone.id ? milestone : _milestone,
@@ -67,17 +66,17 @@ export function Milestones({ projectId }: MilestonesProps) {
     setPagination({ page: page + 1, perPage });
   }
 
-  function showModalCreateMIlestone() {
+  function showModalMIlestone() {
     setMilestone({ isVisible: true });
   }
 
-  function hideModalCreateMIlestone() {
+  function hideModalMIlestone() {
     setMilestone({ isVisible: false });
   }
 
   return (
     <div className='milestones'>
-      <CreateMilestone onClick={showModalCreateMIlestone} />
+      <CreateMilestone onClick={showModalMIlestone} />
       {milestonesState.milestones.map((milestone) => (
         <Milestone
           key={milestone.id}
@@ -95,12 +94,12 @@ export function Milestones({ projectId }: MilestonesProps) {
         createPortal(
           <Modal
             title={milestoneState.milestone ? 'Редактировать этап' : 'Создать этап'}
-            onClose={hideModalCreateMIlestone}
+            onClose={hideModalMIlestone}
             footer={false}
           >
             <MilestoneCreateForm
               milestone={milestoneState?.milestone}
-              onCancel={hideModalCreateMIlestone}
+              onCancel={hideModalMIlestone}
               onOk={createOrEditMilestone}
             />
           </Modal>,

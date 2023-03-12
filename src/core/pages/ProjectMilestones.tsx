@@ -3,7 +3,7 @@ import './ProjectMilestones.scss'
 import { Milestones } from '../components/smart/milestones/Milestones'
 import image from '../../assets/images/bg.svg'
 
-const PROJECT_ID = 180;
+const PROJECT_ID = 261; //180
 
 export const ProjectMilestones = () => {
   return (
