@@ -17,6 +17,7 @@ import { MilestoneState } from '../../../models/Milestone';
 import { MilestoneBodyProps, MilestoneHeaderProps, MilestoneProps } from './MilestoneTypes';
 import successIcon from '../../../../assets/images/success.svg';
 import './Milestone.scss';
+import { Input } from '../../dumb/input/Input';
 
 const INTERVAL_REFRESH_DATA = 300000;
 
@@ -126,6 +127,10 @@ function MilestoneBody({
 }) {
   return (
     <div className='milestone-body'>
+      <div className='controls'>
+        <Button type='primary'>Создать</Button>
+        <Input placeholder='Поиск'></Input>
+      </div>
       <Boards>
         <Board title='Открытые' issues={openIssues} />
         <Board title='Тестирование' type={'debug'} issues={testsIssues} />
