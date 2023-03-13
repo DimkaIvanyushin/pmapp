@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { Issue } from '../models/Issue';
-import { Milestone } from '../models/Milestone';
-import { Pagination } from '../models/Pagination';
+import { Issue } from '../models/issue';
+import { Milestone } from '../models/milestone';
+import { Pagination } from '../models/pagination';
 
 const apiUrl = 'http://gitlab.vitebsk.energo.net';
 const token = '-7fdpi5x1xwPy8WWsy-G';

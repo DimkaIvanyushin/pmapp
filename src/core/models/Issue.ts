@@ -1,5 +1,5 @@
-import { Ids } from './Ids';
-import { User } from './User';
+import { Ids } from './ids';
+import { User } from './user';
 
 export enum IssueStateEnum {
   OPENED = 'opened',

@@ -1,4 +1,4 @@
-import { Ids } from './Ids';
+import { Ids } from './ids';
 
 export enum MilestoneState {
   ACTIVE = 'active',
