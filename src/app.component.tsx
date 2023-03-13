@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectMilestones } from './core/pages/projectMilestones/project-milestones.component';
+import { ProjectMilestones } from './core/pages/milestones/milestones.component';
 
 function App() {
   return (

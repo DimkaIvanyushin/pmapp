@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Milestones } from './components/milestones/milestones.component';
 import image from '../../../assets/images/bg.svg';
-import './project-milestones.component.scss';
+import './milestones.component.scss';
 
 const PROJECT_ID = 261; //180 261
 
