@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAutoFocus } from '../../../src/AutoFocus';
+import { useAutoFocus } from '../../src/AutoFocus';
 import './Input.scss';
 
 export type InputProps = {

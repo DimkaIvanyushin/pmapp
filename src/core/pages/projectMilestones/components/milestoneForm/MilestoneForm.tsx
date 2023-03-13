@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
-import { Milestone } from '../../../models/Milestone';
-import { Button } from '../../dumb/button/Button';
-import { FormGroup } from '../../dumb/forms/FormGroup';
-import { DatePicker } from '../../dumb/input/DatePicker';
-import { Input } from '../../dumb/input/Input';
-import { TextArea } from '../../dumb/input/TextArea';
-import { Label } from '../../dumb/label/Label';
-import { Row } from '../../dumb/layout/Row';
+import { Button, DatePicker, FormGroup, Input, Label, Row, TextArea } from '../../../../components';
+import { Milestone } from '../../../../models';
 import './MilestoneForm.scss';
 
 type MilestoneCreateFormProps = {

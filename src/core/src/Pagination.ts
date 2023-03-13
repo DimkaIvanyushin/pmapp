@@ -7,8 +7,6 @@ export function Pagination<T>(_data: T[]) {
     nextPage: () => {
       page++;
       const end = page * count;
-
-      console.log(end);
       return data.slice(0, Math.min(end, data.length));
     },
     setData: (_data: T[]) => {

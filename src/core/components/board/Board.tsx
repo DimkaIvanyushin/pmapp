@@ -1,9 +1,8 @@
 import React from 'react';
+import { Card, Empty } from '..';
+import { Issue } from '../../models';
+import cardsImage from '../../../assets/images/cards.svg';
 import './Board.scss';
-import { Issue } from '../../../models/Issue';
-import { Card } from '../card/Card';
-import cardsImage from '../../../../assets/images/cards.svg';
-import { Empty } from '../empty/Empty';
 
 type BoardProps = {
   issues: Issue[];
@@ -12,9 +11,6 @@ type BoardProps = {
 };
 
 export function Board({ issues, title, type }: BoardProps) {
-
-  console.log(issues);
-
   const issuesCard = issues.map((issue) => (
     <Card
       key={issue.id}
@@ -24,8 +20,6 @@ export function Board({ issues, title, type }: BoardProps) {
       type={type}
     />
   ));
-
-  console.log(issuesCard);
   return (
     <div className='board'>
       <div className='title'>

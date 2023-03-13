@@ -1,7 +1,7 @@
 import React from 'react';
 import './Input.scss';
 import { InputProps } from './Input';
-import { useAutoFocus } from '../../../src/AutoFocus';
+import { useAutoFocus } from '../../src/AutoFocus';
 
 type TextAreaProps = {
   rows?: number;

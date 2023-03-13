@@ -1,5 +1,5 @@
 import React from 'react';
-import emptyImage from '../../../../assets/images/empty.svg';
+import emptyImage from '../../../assets/images/empty.svg';
 import './Empty.scss';
 
 type EmptyProps = {

@@ -1,4 +1,4 @@
-import { Milestone } from '../../../models/Milestone';
+import { Milestone } from '../../../../models';
 
 export type MilestonesProps = {
   projectId: number;

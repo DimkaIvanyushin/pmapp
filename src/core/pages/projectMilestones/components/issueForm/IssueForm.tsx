@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { Issue } from '../../../models/Issue';
-import { Button } from '../../dumb/button/Button';
-import { FormGroup } from '../../dumb/forms/FormGroup';
-import { TextArea } from '../../dumb/input/TextArea';
-import { Label } from '../../dumb/label/Label';
+import { Button, FormGroup, Label, TextArea } from '../../../../components';
+import { Issue } from '../../../../models';
+
 
 type IssueFormProps = {
   issue?: Issue | null;

@@ -1,11 +1,11 @@
 import React from 'react';
-import iconPlus from '../../../../assets/images/plus.svg';
+import iconPlus from '../../../../../assets/images/plus.svg';
 
 type CreateMilestoneProps = {
   onClick: () => void;
 };
 
-export function CreateMilestone({ onClick }: CreateMilestoneProps) {
+export function CreateMilestoneButton({ onClick }: CreateMilestoneProps) {
   return (
     <div className='milestone-header create' onClick={onClick}>
       <div className='milestone-header-first'>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { ProjectMilestones } from './core/pages/ProjectMilestones';
+import { ProjectMilestones } from './core/pages/projectMilestones/ProjectMilestones';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <ProjectMilestones />
     </div>
   );

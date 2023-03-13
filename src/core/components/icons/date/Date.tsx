@@ -1,6 +1,6 @@
 import React from 'react';
-import dateStartIcon from '../../../../../assets/images/date-start.svg';
-import dateEndIcon from '../../../../../assets/images/date-end.svg';
+import dateStartIcon from '../../../../assets/images/date-start.svg';
+import dateEndIcon from '../../../../assets/images/date-end.svg';
 import './Date.scss';
 
 type DateIconProps = {

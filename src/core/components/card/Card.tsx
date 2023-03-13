@@ -2,9 +2,9 @@ import React from 'react';
 import { Avatar } from '../avatar/Avatar';
 import './Card.scss';
 
-import successGlif from '../../../../assets/images/success-glif.svg';
-import debugGlif from '../../../../assets/images/debug-glif.svg';
-import dateGlif from '../../../../assets/images/date-glif.svg';
+import successGlif from '../../../assets/images/success-glif.svg';
+import debugGlif from '../../../assets/images/debug-glif.svg';
+import dateGlif from '../../../assets/images/date-glif.svg';
 
 type CardProps = {
   text: string;

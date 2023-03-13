@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Avatar.scss';
-import userIcon from '../../../../assets/images/user.svg';
+import userIcon from '../../../assets/images/user.svg';
 
 type AvatarProps = {
   src?: string;
