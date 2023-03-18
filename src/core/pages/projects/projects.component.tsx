@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { RoutesPath } from '../../common/routes';
 import { Project } from '../../models';
 import * as API from '../../api/api';
 import { ProjectCard } from './components/card/card.component';
 import './projects.component.scss';
+import { LoadingIcon } from '../../components';
 
 function generateUrl(projectId: number) {
   return {
@@ -36,6 +37,8 @@ export default function Projects() {
 
   return (
     <div className='project-contents'>
+      {loading && <LoadingIcon />}
+
       {projects.map((project) => (
         <ProjectCard key={project.id} onClick={handleOnClick} project={project} />
       ))}
