@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, DatePicker, FormGroup, Input, Label, Row, TextArea } from '../../../../components';
 import { Milestone } from '../../../../models';
 import './milestone-form.component.scss';
+import { Strings } from '../../../../common';
 
 type MilestoneCreateFormProps = {
   milestone?: Milestone | null;
@@ -40,7 +41,7 @@ export function MilestoneCreateForm({ milestone, onOk, onCancel }: MilestoneCrea
   return (
     <form>
       <FormGroup>
-        <Label required>Заголовок</Label>
+        <Label required>{Strings.titleLable}</Label>
         <Input
           required
           name='title'
@@ -50,7 +51,7 @@ export function MilestoneCreateForm({ milestone, onOk, onCancel }: MilestoneCrea
         />
       </FormGroup>
       <FormGroup>
-        <Label>Описание</Label>
+        <Label>{Strings.descriptionLabel}</Label>
         <TextArea
           name='description'
           value={milestoneState?.description}
@@ -60,7 +61,7 @@ export function MilestoneCreateForm({ milestone, onOk, onCancel }: MilestoneCrea
       </FormGroup>
       <Row>
         <FormGroup>
-          <Label>Начало</Label>
+          <Label>{Strings.startLabel}</Label>
           <DatePicker
             name='start_date'
             onChange={(event) => handleInputChange(event.target)}
@@ -68,7 +69,7 @@ export function MilestoneCreateForm({ milestone, onOk, onCancel }: MilestoneCrea
           />
         </FormGroup>
         <FormGroup>
-          <Label>Окончание</Label>
+          <Label>{Strings.endLabel}</Label>
           <DatePicker
             name='due_date'
             onChange={(event) => handleInputChange(event.target)}
@@ -78,14 +79,14 @@ export function MilestoneCreateForm({ milestone, onOk, onCancel }: MilestoneCrea
       </Row>
       <FormGroup>
         <div className='actions'>
-          <Button onClick={onCancel}>Отмена</Button>
+          <Button onClick={onCancel}>{Strings.cancel}</Button>
           <Button
             type='primary'
             onClick={(event) => handlerSaveButton(event)}
             loading={isLoading}
             disabled={isDisabled()}
           >
-            Сохранить
+            {Strings.save}
           </Button>
         </div>
       </FormGroup>

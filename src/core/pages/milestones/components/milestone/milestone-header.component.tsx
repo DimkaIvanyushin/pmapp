@@ -1,6 +1,11 @@
 import React, { useMemo } from 'react';
 import { MilestoneHeaderProps } from '..';
-import { getBusinessDaysCount, getLocalDateString, getPercent } from '../../../../common/index';
+import {
+  Strings,
+  getBusinessDaysCount,
+  getLocalDateString,
+  getPercent,
+} from '../../../../common/index';
 import {
   Avatar,
   AvatarGroup,
@@ -41,16 +46,20 @@ export function MilestoneHeader({
         {isClosedMilestone() && <img src={successIcon} alt='success' />}
         <span className='title'>{isLoading ? <LoadingIcon /> : milestone?.title}</span>
         <span className='date'>
-          <DateLabel date={milestone?.start_date} tooltip='Начало' />
-          <DateLabel date={milestone?.due_date} tooltip='Окончание' type='end' />
-          {leadTime && <span>(Дней: {leadTime} )</span>}
+          <DateLabel date={milestone?.start_date} tooltip={Strings.startLabel} />
+          <DateLabel date={milestone?.due_date} tooltip={Strings.endLabel} type='end' />
+          {leadTime && (
+            <span>
+              ({Strings.days}: {leadTime} )
+            </span>
+          )}
         </span>
       </div>
       <div className='milestone-header-last'>
         <div className='slider'>
           <div className='slider-slide'>
             <Button type='primary' onClick={(e) => editHandlerClick(e, milestone)}>
-              Редактировать
+              {Strings.edit}
             </Button>
           </div>
           <div className='slider-slide'>
@@ -73,7 +82,7 @@ function TasksLabel({ close, all }: { milestone: Milestone; close: number; all: 
   return (
     <div className='tasks-label'>
       <span>
-        Задачи:&nbsp;
+        {Strings.issues}:&nbsp;
         <span className='bold'>
           {close}/{all}
         </span>
@@ -82,14 +91,7 @@ function TasksLabel({ close, all }: { milestone: Milestone; close: number; all: 
   );
 }
 
-function DateLabel({
-  date,
-  type,
-}: {
-  date: string;
-  tooltip?: string;
-  type?: 'start' | 'end';
-}) {
+function DateLabel({ date, type }: { date: string; tooltip?: string; type?: 'start' | 'end' }) {
   if (!date) return <></>;
   return <DateIcon text={getLocalDateString(date)} type={type} />;
 }

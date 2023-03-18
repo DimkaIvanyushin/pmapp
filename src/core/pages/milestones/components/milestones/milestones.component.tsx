@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { Milestone as MilestoneModel, Pagination } from '../../../../models';
 import { MilestonesProps, MilestonesState, MilestoneState } from './milestones.types';
 import { Button, Modal } from '../../../../components';
+import { Strings } from '../../../../common';
 import { Milestone, MilestoneCreateForm, CreateMilestoneButton } from '..';
 import * as API from '../../../../api/api';
 import './milestones.component.scss';
@@ -82,13 +83,13 @@ export function Milestones({ projectId }: MilestonesProps) {
       ))}
 
       <div className='milestones-next-button'>
-        <Button onClick={onNextPage}>Показать ещё</Button>
+        <Button onClick={onNextPage}>{Strings.showMore}</Button>
       </div>
 
       {milestoneState.isVisible &&
         createPortal(
           <Modal
-            title={milestoneState.milestone ? 'Редактировать этап' : 'Создать этап'}
+            title={milestoneState.milestone ? Strings.editMilestone : Strings.createMilestone}
             onClose={hideModalMIlestone}
             footer={false}
           >

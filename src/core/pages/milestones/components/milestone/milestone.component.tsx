@@ -6,6 +6,7 @@ import { MilestoneHeader, MilestoneBody, IssueForm } from '..';
 import { IssueState, MilestoneBodyProps, MilestoneProps } from '..';
 import * as API from '../../../../api/api';
 import './milestone.component.scss';
+import { Strings } from '../../../../common';
 
 const INTERVAL_REFRESH_DATA = 300000;
 
@@ -69,7 +70,7 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
 
       {issueState.isVisible &&
         createPortal(
-          <Modal title='Создать задачу' onClose={hideModalIssue} footer={false}>
+          <Modal title={Strings.create} onClose={hideModalIssue} footer={false}>
             <IssueForm issue={null} onOk={createIssue} onCancel={hideModalIssue} />
           </Modal>,
           document.body,

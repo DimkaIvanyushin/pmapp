@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MilestoneBodyProps } from '..';
 import { Board, Boards, Button, Input } from '../../../../components';
 import { Issue } from '../../../../models';
+import { Strings } from '../../../../common';
 
 export function MilestoneBody({
   issues: { closedIssues, openIssues, testsIssues },
@@ -42,17 +43,17 @@ export function MilestoneBody({
     <div className='milestone-body'>
       <div className='controls'>
         <Button type='primary' onClick={onCreateIssue}>
-          Создать
+          {Strings.create}
         </Button>
         <Input
           onChange={(event) => onChangeSearch(event.currentTarget.value)}
-          placeholder='Поиск'
+          placeholder={Strings.search}
         ></Input>
       </div>
       <Boards>
-        <Board title='Открытые' issues={issuesState.openIssues} />
-        <Board title='Тестирование' type={'debug'} issues={issuesState.testsIssues} />
-        <Board title='Выполненные' type={'success'} issues={issuesState.closedIssues} />
+        <Board title={Strings.open} issues={issuesState.openIssues} />
+        <Board title={Strings.test} type={'debug'} issues={issuesState.testsIssues} />
+        <Board title={Strings.complite} type={'success'} issues={issuesState.closedIssues} />
       </Boards>
     </div>
   );

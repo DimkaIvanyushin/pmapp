@@ -27,7 +27,7 @@ export default function App() {
   return (
     <div className='app' style={{ backgroundImage: `url(${image})` }}>
       <div className='app-menu'>
-        <SwitchLanguage language={language} onLanguage={handlerChangeLang} />
+        <SwitchLanguage language={language} onChangeLanguage={handlerChangeLang} />
       </div>
 
       <div className='app-header'>

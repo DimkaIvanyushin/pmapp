@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, FormGroup, Label, TextArea } from '../../../../components';
 import { Issue } from '../../../../models';
+import { Strings } from '../../../../common';
 
 type IssueFormProps = {
   issue?: Issue | null;
@@ -35,7 +36,7 @@ export function IssueForm({ issue, onCancel, onOk }: IssueFormProps) {
   return (
     <form>
       <FormGroup>
-        <Label required>Заголовок</Label>
+        <Label required>{Strings.titleLable}</Label>
         <TextArea
           required
           name='title'
@@ -46,7 +47,7 @@ export function IssueForm({ issue, onCancel, onOk }: IssueFormProps) {
         />
       </FormGroup>
       <FormGroup>
-        <Label>Описание</Label>
+        <Label>{Strings.descriptionLabel}</Label>
         <TextArea
           name='description'
           value={issueState?.description}
@@ -56,9 +57,9 @@ export function IssueForm({ issue, onCancel, onOk }: IssueFormProps) {
       </FormGroup>
       <FormGroup>
         <div className='actions'>
-          <Button onClick={onCancel}>Отмена</Button>
+          <Button onClick={onCancel}>{Strings.cancel}</Button>
           <Button type='primary' onClick={(event) => handlerSaveButton(event)} loading={isLoading}>
-            Сохранить
+            {Strings.save}
           </Button>
         </div>
       </FormGroup>

@@ -3,10 +3,10 @@ import { Languages } from '../../common';
 
 type SwitchLanguageProps = {
   language: Languages;
-  onLanguage: (Language: Languages) => void;
+  onChangeLanguage: (Language: Languages) => void;
 };
 
-export function SwitchLanguage({ language, onLanguage }: SwitchLanguageProps) {
+export function SwitchLanguage({ language, onChangeLanguage: onLanguage }: SwitchLanguageProps) {
   const langs = [Languages.EN, Languages.RU];
 
   function handlerLanguage(_language: Languages) {
