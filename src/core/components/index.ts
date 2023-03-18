@@ -1,5 +1,5 @@
 export { Avatar } from './avatar/avatar.component';
-export { AvatarGroup } from './avatarGroup/avatar-group.component';
+export { AvatarGroup } from './avatar-group/avatar-group.component';
 export { Board } from './board/board.component';
 export { Boards } from './boards/boards.component';
 export { Button } from './button/button.component';
@@ -18,3 +18,4 @@ export { Row } from './layout/row.component';
 export { Modal } from './modal/modal.component';
 export { Progress } from './progress/progress.component';
 export { Tooltip } from './tooltip/tooltip.component';
+export { SwitchLanguage } from './switch-language/switch-language.component';

@@ -1,3 +1,5 @@
+import { Languages } from "./localization";
+
 export function getLocalDateString(date: string): string {
   return new Date(date).toLocaleDateString();
 }
@@ -39,4 +41,9 @@ export function getBusinessDaysCount(
 
   // Возвращаем количество рабочих дней
   return businessDays;
+}
+
+export function getLang(): Languages {
+  if (navigator.languages != undefined) return navigator.languages[0] as Languages;
+  return navigator.language as Languages;
 }
