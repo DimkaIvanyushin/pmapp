@@ -1,10 +1,11 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { RoutesPath } from './core/common/routes';
-import { LoadingIcon, SwitchLanguage } from './core/components';
+import { LoadingIcon, SwitchLanguage, SwitchTheme } from './core/components';
 import { Languages, Strings } from './core/common';
 import { getLang } from './core/common/utils';
 import image from './assets/images/bg.svg';
+
 import './app.component.scss';
 
 const Milestones = lazy(() => import('./core/pages/milestones/milestones.component'));
@@ -28,6 +29,7 @@ export default function App() {
     <div className='app' style={{ backgroundImage: `url(${image})` }}>
       <div className='app-menu'>
         <SwitchLanguage language={language} onChangeLanguage={handlerChangeLang} />
+        <SwitchTheme />
       </div>
 
       <div className='app-header'>

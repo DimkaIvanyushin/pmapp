@@ -19,3 +19,4 @@ export { Modal } from './modal/modal.component';
 export { Progress } from './progress/progress.component';
 export { Tooltip } from './tooltip/tooltip.component';
 export { SwitchLanguage } from './switch-language/switch-language.component';
+export { SwitchTheme } from './switch-theme/switch-theme.component';

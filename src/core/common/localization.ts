@@ -27,6 +27,8 @@ export const Strings = new LocalizedStrings({
     empty: 'Нет записей',
     issues: 'Задачи',
     days: 'Дней',
+    ligth: 'Светлая',
+    dark: 'Тёмная',
   },
   [Languages.EN]: {
     header: 'Project Manager',
@@ -49,5 +51,7 @@ export const Strings = new LocalizedStrings({
     empty: 'Empty',
     issues: 'Issues',
     days: 'Days',
+    ligth: 'Ligth',
+    dark: 'Dark',
   },
 });
