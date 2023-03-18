@@ -1,6 +1,10 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { RoutesPath } from '../../common/routes';
+import { Project } from '../../models';
+import * as API from '../../api/api';
+import { ProjectCard } from './components/card/card.component';
+import './projects.component.scss';
 
 function generateUrl(projectId: number) {
   return {
@@ -10,17 +14,31 @@ function generateUrl(projectId: number) {
 }
 
 export default function Projects() {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const abortController = new AbortController();
+    const { signal } = abortController;
+    setLoading(true);
+
+    API.getProjects(signal)
+      .then((projectResponse) => setProjects(projectResponse.data))
+      .finally(() => setLoading(false));
+
+    return () => abortController.abort();
+  }, []);
+
+  function handleOnClick(projectId: number) {
+    navigate(generateUrl(projectId));
+  }
+
   return (
     <div className='project-contents'>
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <Link to={generateUrl(117)}>Doxit</Link>
-        </li>
-        <li>
-          <Link to={generateUrl(180)}>ИАС</Link>
-        </li>
-      </ul>
+      {projects.map((project) => (
+        <ProjectCard key={project.id} onClick={handleOnClick} project={project} />
+      ))}
     </div>
   );
 }

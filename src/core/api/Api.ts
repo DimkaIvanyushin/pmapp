@@ -1,7 +1,5 @@
 import axios from 'axios';
-import { Issue } from '../models/issue';
-import { Milestone } from '../models/milestone';
-import { Pagination } from '../models/pagination';
+import { Issue, Milestone, Pagination, Project } from '../models';
 
 const apiUrl = 'http://gitlab.vitebsk.energo.net';
 const token = '-7fdpi5x1xwPy8WWsy-G';
@@ -11,6 +9,17 @@ const config = {
     'PRIVATE-TOKEN': token,
   },
 };
+
+/**
+ * Получить список проектов
+ * @returns Список проектов
+ */
+export function getProjects(signal: AbortSignal): Promise<{ data: Project[] }> {
+  return axios.get(`${apiUrl}/api/v4/projects?membership=true&order_by=last_activity_at`, {
+    signal,
+    ...config,
+  });
+}
 
 /**
  * Получить список этапов (спринтов)

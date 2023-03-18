@@ -1,10 +1,9 @@
 import React from 'react';
 import { Avatar } from '../avatar/avatar.component';
+import successIcon from '../../../assets/images/success-glif.svg';
+import debugIcon from '../../../assets/images/debug-glif.svg';
+import dateIcon from '../../../assets/images/date-glif.svg';
 import './card.component.scss';
-
-import successGlif from '../../../assets/images/success-glif.svg';
-import debugGlif from '../../../assets/images/debug-glif.svg';
-import dateGlif from '../../../assets/images/date-glif.svg';
 
 type CardProps = {
   text: string;
@@ -26,29 +25,29 @@ export function Card({ avatarSrc, id, date, text, type }: CardProps) {
         </div>
       </div>
 
-      {type && <GlifCard type={type} />}
+      {type && <IconTypeCard type={type} />}
     </div>
   );
 }
 
 function DateCard({ date }: { date: string }) {
   return (
-    <div className='dateCard'>
-      <img src={dateGlif} alt='date glif' />
+    <div className='date-card'>
+      <img src={dateIcon} alt='date glif' />
       {date}
     </div>
   );
 }
 
-function GlifCard({ type }: { type: 'debug' | 'success' }) {
-  const glifType = {
-    debug: debugGlif,
-    success: successGlif,
+function IconTypeCard({ type }: { type: 'debug' | 'success' }) {
+  const iconType = {
+    debug: debugIcon,
+    success: successIcon,
   };
 
   return (
     <div className='glif'>
-      <img src={glifType[type]} alt='glif' />
+      <img src={iconType[type]} alt='glif' />
     </div>
   );
 }
