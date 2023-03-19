@@ -1,9 +1,9 @@
-name: Deploy Application
+name: Deploy
 
 on:
   push:
     branches:
-      - deploy
+      - master
 
 env:
   NODE_VERSION: 16
