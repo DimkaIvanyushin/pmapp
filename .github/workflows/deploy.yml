@@ -33,6 +33,10 @@ jobs:
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
           publish_dir: ./build    
+
+        env:
+          NODE_ENV: 'production'
+  
     # - name: Deploy
     #   run: |
     #     git config --global user.name $user_name
