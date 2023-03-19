@@ -6,12 +6,12 @@ on:
       - deploy
 
 env:
-  NODE_VERSION: 14
+  NODE_VERSION: 16
 
 jobs:
   build:
     name: Build and deploy
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
   
     steps:
       - name: Install NodeJS
