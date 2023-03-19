@@ -5,8 +5,8 @@ import { Collapse, Modal } from '../../../../components';
 import { MilestoneHeader, MilestoneBody, IssueForm } from '..';
 import { IssueState, MilestoneBodyProps, MilestoneProps } from '..';
 import * as API from '../../../../api/api';
-import './milestone.component.scss';
 import { Strings } from '../../../../common';
+import './milestone.component.scss';
 
 const INTERVAL_REFRESH_DATA = 300000;
 
