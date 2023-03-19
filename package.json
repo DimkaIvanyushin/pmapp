@@ -7,7 +7,7 @@
     "dev": "docker-compose -f docker-compose.dev.yml up",
     "start": "react-scripts start",
     "start:prod": "docker run -p 80:80 --name react-app app-prod",
-    "build": "react-scripts build",
+    "build": "react-scripts build --stats",
     "build:prod": "docker-compose -f docker-compose.prod.yml build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
