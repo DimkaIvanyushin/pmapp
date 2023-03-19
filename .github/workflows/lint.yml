@@ -1,0 +1,17 @@
+name: Check-Lint
+
+on:
+  push:
+    branches:
+      - dev
+ 
+jobs:
+  check_lint:
+    name: check lint
+    runs-on: ubuntu-latest 
+    
+    steps:
+    - name: npm install, lint
+      run: |
+        npm install
+        npm run lint
