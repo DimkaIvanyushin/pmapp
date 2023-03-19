@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RoutesPath } from '../../common/routes';
 import { Project } from '../../models';
-import * as API from '../../api/api';
 import { ProjectCard } from './components/card/card.component';
 import './projects.component.scss';
 import { LoadingIcon } from '../../components';
+import { getProjects } from '../../api/api';
 
 function generateUrl(projectId: number) {
   return {
@@ -24,7 +24,7 @@ export default function Projects() {
     const { signal } = abortController;
     setLoading(true);
 
-    API.getProjects(signal)
+    getProjects(signal)
       .then((projectResponse) => setProjects(projectResponse.data))
       .finally(() => setLoading(false));
 

@@ -4,9 +4,10 @@ import { Issue, IssueStateEnum } from '../../../../models';
 import { Collapse, Modal } from '../../../../components';
 import { MilestoneHeader, MilestoneBody, IssueForm } from '..';
 import { IssueState, MilestoneBodyProps, MilestoneProps } from '..';
-import * as API from '../../../../api/api';
+import { getIssues, createIssue } from '../../../../api/api';
 import { Strings } from '../../../../common';
 import './milestone.component.scss';
+
 
 const INTERVAL_REFRESH_DATA = 300000;
 
@@ -19,7 +20,7 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
 
   useEffect(() => {
     const intervalId = setInterval(
-      () => API.getIssues(projectId, milestone.id).then((response) => setIssues(response.data)),
+      () => getIssues(projectId, milestone.id).then((response) => setIssues(response.data)),
       INTERVAL_REFRESH_DATA,
     );
     return () => clearInterval(intervalId);
@@ -27,7 +28,7 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
 
   useEffect(() => {
     setIsLoading(true);
-    API.getIssues(projectId, milestone.id)
+    getIssues(projectId, milestone.id)
       .then((response) => setIssues(response.data))
       .finally(() => setIsLoading(false));
   }, [projectId]);
@@ -42,8 +43,8 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
     } as MilestoneBodyProps;
   }, [issues]);
 
-  async function createIssue(issue: Issue) {
-    const responseIssue = await API.createIssue(projectId, milestone.id, issue);
+  async function createIssueHandler(issue: Issue) {
+    const responseIssue = await createIssue(projectId, milestone.id, issue);
     setIssues([responseIssue.data, ...issues]);
     setIssueState({ isVisible: false });
   }
@@ -71,7 +72,7 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
       {issueState.isVisible &&
         createPortal(
           <Modal title={Strings.create} onClose={hideModalIssue} footer={false}>
-            <IssueForm issue={null} onOk={createIssue} onCancel={hideModalIssue} />
+            <IssueForm issue={null} onOk={createIssueHandler} onCancel={hideModalIssue} />
           </Modal>,
           document.body,
         )}
