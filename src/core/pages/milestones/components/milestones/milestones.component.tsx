@@ -3,9 +3,8 @@ import { createPortal } from 'react-dom';
 import { Milestone as MilestoneModel, Pagination } from '../../../../models';
 import { MilestonesProps, MilestonesState, MilestoneState } from './milestones.types';
 import { Button, Modal } from '../../../../components';
-import { Strings } from '../../../../common';
+import { Strings, API } from '../../../../common';
 import { Milestone, MilestoneCreateForm, CreateMilestoneButton } from '..';
-import { createMilestone, getMilestones } from '../../../../api/api';
 import './milestones.component.scss';
 
 
@@ -24,7 +23,7 @@ export function Milestones({ projectId }: MilestonesProps) {
 
   useEffect(() => {
     setMilestonesState({ ...milestonesState, loading: true });
-    getMilestones(projectId, pagination).then(({ data: milestones }) => {
+    API.getMilestones(projectId, pagination).then(({ data: milestones }) => {
       setMilestonesState({
         loading: false,
         milestones: [...milestonesState.milestones, ...milestones],
@@ -47,7 +46,7 @@ export function Milestones({ projectId }: MilestonesProps) {
   }
 
   async function createMilestoneHandler(projectId: number, milestone: MilestoneModel) {
-    const responseMilestone = await createMilestone(projectId, milestone);
+    const responseMilestone = await API.createMilestone(projectId, milestone);
     setMilestonesState({ milestones: [responseMilestone.data, ...milestonesState.milestones] });
     setMilestone({ isVisible: false });
   }

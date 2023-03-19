@@ -4,8 +4,7 @@ import { Issue, IssueStateEnum } from '../../../../models';
 import { Collapse, Modal } from '../../../../components';
 import { MilestoneHeader, MilestoneBody, IssueForm } from '..';
 import { IssueState, MilestoneBodyProps, MilestoneProps } from '..';
-import { getIssues, createIssue } from '../../../../api/api';
-import { Strings } from '../../../../common';
+import { Strings, API } from '../../../../common';
 import './milestone.component.scss';
 
 
@@ -20,7 +19,7 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
 
   useEffect(() => {
     const intervalId = setInterval(
-      () => getIssues(projectId, milestone.id).then((response) => setIssues(response.data)),
+      () => API.getIssues(projectId, milestone.id).then((response) => setIssues(response.data)),
       INTERVAL_REFRESH_DATA,
     );
     return () => clearInterval(intervalId);
@@ -28,7 +27,7 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
 
   useEffect(() => {
     setIsLoading(true);
-    getIssues(projectId, milestone.id)
+    API.getIssues(projectId, milestone.id)
       .then((response) => setIssues(response.data))
       .finally(() => setIsLoading(false));
   }, [projectId]);
@@ -44,7 +43,7 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
   }, [issues]);
 
   async function createIssueHandler(issue: Issue) {
-    const responseIssue = await createIssue(projectId, milestone.id, issue);
+    const responseIssue = await API.createIssue(projectId, milestone.id, issue);
     setIssues([responseIssue.data, ...issues]);
     setIssueState({ isVisible: false });
   }
