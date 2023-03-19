@@ -3,7 +3,7 @@ name: Lint
 on:
   push:
     branches:
-      - dev
+      - deploy
 
 env:
   NODE_VERSION: 16 
@@ -28,11 +28,11 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: deploy to gh-pages
+    - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        deploy_key: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-        publish_dir: ./build
+        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        publish_dir: ./public
 
     # - name: Deploy
     #   run: |
