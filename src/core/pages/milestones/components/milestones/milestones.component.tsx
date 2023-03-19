@@ -5,8 +5,9 @@ import { MilestonesProps, MilestonesState, MilestoneState } from './milestones.t
 import { Button, Modal } from '../../../../components';
 import { Strings } from '../../../../common';
 import { Milestone, MilestoneCreateForm, CreateMilestoneButton } from '..';
-import './milestones.component.scss';
 import { createMilestone, getMilestones } from '../../../../api/api';
+import './milestones.component.scss';
+
 
 export function Milestones({ projectId }: MilestonesProps) {
   const [pagination, setPagination] = useState<Pagination>({ perPage: 5, page: 1 });

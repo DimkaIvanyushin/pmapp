@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { RoutesPath } from '../../common/routes';
 import { Project } from '../../models';
 import { ProjectCard } from './components/card/card.component';
-import './projects.component.scss';
 import { LoadingIcon } from '../../components';
 import { getProjects } from '../../api/api';
+import './projects.component.scss';
 
 function generateUrl(projectId: number) {
   return {
