@@ -41,7 +41,7 @@ export function MilestoneCreateForm({ milestone, onOk, onCancel }: MilestoneCrea
   return (
     <form>
       <FormGroup>
-        <Label required>{Strings.titleLable}</Label>
+        <Label required>{Strings.titleLabel}</Label>
         <Input
           required
           name='title'

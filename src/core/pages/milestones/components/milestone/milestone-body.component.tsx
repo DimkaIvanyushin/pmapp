@@ -53,7 +53,7 @@ export function MilestoneBody({
       <Boards>
         <Board title={Strings.open} issues={issuesState.openIssues} />
         <Board title={Strings.test} type={'debug'} issues={issuesState.testsIssues} />
-        <Board title={Strings.complite} type={'success'} issues={issuesState.closedIssues} />
+        <Board title={Strings.complete} type={'success'} issues={issuesState.closedIssues} />
       </Boards>
     </div>
   );

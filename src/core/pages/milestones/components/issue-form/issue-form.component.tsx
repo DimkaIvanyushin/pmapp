@@ -36,7 +36,7 @@ export function IssueForm({ issue, onCancel, onOk }: IssueFormProps) {
   return (
     <form>
       <FormGroup>
-        <Label required>{Strings.titleLable}</Label>
+        <Label required>{Strings.titleLabel}</Label>
         <TextArea
           required
           name='title'

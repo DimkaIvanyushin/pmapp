@@ -11,7 +11,7 @@ export function SwitchTheme() {
       value={themeContext.theme}
     >
       <option value={Themes.DARK}>{Strings.dark}</option>
-      <option value={Themes.LIGHT}>{Strings.ligth}</option>
+      <option value={Themes.LIGHT}>{Strings.light}</option>
     </select>
   );
 }
