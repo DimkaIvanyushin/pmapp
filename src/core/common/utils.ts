@@ -1,4 +1,4 @@
-import { Languages } from "./localization";
+import { Languages } from './localization';
 
 export function getLocalDateString(date: string): string {
   return new Date(date).toLocaleDateString();
@@ -46,4 +46,31 @@ export function getBusinessDaysCount(
 export function getLang(): Languages {
   if (navigator.languages != undefined) return navigator.languages[0] as Languages;
   return navigator.language as Languages;
+}
+
+export function timeSince(date: Date): string {
+  const seconds = Math.floor((new Date().getTime() - date.getTime()) / 1000);
+
+  let interval = seconds / 31536000;
+
+  if (interval > 1) {
+    return Math.floor(interval) + ' лет';
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    return Math.floor(interval) + ' месяцев';
+  }
+  interval = seconds / 86400;
+  if (interval > 1) {
+    return Math.floor(interval) + ' дней';
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    return Math.floor(interval) + ' часов';
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    return Math.floor(interval) + ' минут';
+  }
+  return Math.floor(seconds) + ' секунд';
 }

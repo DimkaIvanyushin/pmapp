@@ -5,11 +5,12 @@
   flex-basis: 40%;
   flex-grow: 1;
   height: 80px;
-  padding: 15px 20px;
+  padding: 15px;
   border: 1px solid var(--border-color);
   border-radius: 6px;
   background-color: var(--background-color-list);
   transition: all 0.3s ease;
+  overflow: hidden;
 
   &:hover {
     cursor: pointer;
@@ -30,12 +31,16 @@
     width: 100%;
     flex-direction: row;
     align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     gap: 10px;
   }
 
   .description {
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
     width: 100%;
     text-align: left;
   }
@@ -49,7 +54,6 @@
     .item {
       display: flex;
       margin-left: 10px;
-      
       img {
         transform: scale(1.2);
         margin-right: 3px;
@@ -61,7 +65,7 @@
   .date {
     font-size: 0.9em;
     white-space: nowrap;
-    max-width: 100px;
+    max-width: 190px;
     text-overflow: ellipsis;
     overflow: hidden;
   }

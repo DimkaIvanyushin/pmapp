@@ -9,5 +9,6 @@ export interface Project extends Ids {
   avatar_url: string;
   forks_count: number;
   star_count: number;
+  open_issues_count: number;
   last_activity_at: string | Date;
 }
