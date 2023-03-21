@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { Issue, Milestone, Pagination, Project } from '../models';
 
-const apiUrl = 'http://gitlab.vitebsk.energo.net';
-const token = '-7fdpi5x1xwPy8WWsy-G';
-// const apiUrl = 'https://gitlab.com';
-// const token = 'glpat-smKHFqYrx41L_Mx5FrY_';
+// const apiUrl = 'http://gitlab.vitebsk.energo.net';
+// const token = '-7fdpi5x1xwPy8WWsy-G';
+const apiUrl = 'https://gitlab.com';
+const token = 'glpat-smKHFqYrx41L_Mx5FrY_';
 
 const config = {
   headers: {

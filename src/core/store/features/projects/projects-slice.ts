@@ -36,10 +36,13 @@ export const projectsSlice = createSlice({
       .addCase(getProjectsAsync.pending, (state) => {
         state.status = Status.LOADING;
       })
-      .addCase(getProjectsAsync.fulfilled, (state, { payload }) => {
+      .addCase(getProjectsAsync.fulfilled, (state, { payload: projects }) => {
         state.status = Status.SUCCESS;
-        state.projects.allIds = [...state.projects.allIds, ...payload.map((project) => project.id)];
-        payload.forEach((project) => {
+        state.projects.allIds = [
+          ...state.projects.allIds,
+          ...projects.map((project) => project.id),
+        ];
+        projects.forEach((project) => {
           state.projects.byId[project.id] = project;
         });
       })
@@ -50,7 +53,8 @@ export const projectsSlice = createSlice({
 });
 
 export const { addProject } = projectsSlice.actions;
-export const selectProjects = (state: RootState) => Object.values(state.projects.projects.byId).sort((a,b) => b.id - a.id);
+export const selectProjects = (state: RootState) =>
+  Object.values(state.projects.projects.byId).sort((a, b) => b.id - a.id);
 export const selectProjectsStatus = (state: RootState) => state.projects.status;
 
 export default projectsSlice.reducer;

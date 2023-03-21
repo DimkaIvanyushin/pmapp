@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Milestone as MilestoneModel, Pagination } from '../../../../models';
-import { MilestonesProps, MilestonesState, MilestoneState } from './milestones.types';
+import { MilestonesProps, MilestoneState } from './milestones.types';
 import { Button, Modal } from '../../../../components';
-import { Strings, API } from '../../../../common';
+import { Strings } from '../../../../common';
 import { Milestone, MilestoneCreateForm, CreateMilestoneButton } from '..';
 import './milestones.component.scss';
-
+import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
+import {
+  createMilestoneAsync,
+  editMilestoneAsync,
+  getMilestonesAsync,
+  selectMilestones,
+  selectMilestonesStatus,
+} from '../../../../store/features/projects/milestones-slice';
 
 export function Milestones({ projectId }: MilestonesProps) {
   const [pagination, setPagination] = useState<Pagination>({ perPage: 5, page: 1 });
 
-  const [milestonesState, setMilestonesState] = useState<MilestonesState>({
-    loading: false,
-    milestones: [],
-  });
+  const dispatch = useAppDispatch();
+  const milestonesState = useAppSelector(selectMilestonesStatus);
+  const milestones = useAppSelector(selectMilestones(projectId));
 
   const [milestoneState, setMilestone] = useState<MilestoneState>({
     milestone: null,
@@ -22,44 +28,24 @@ export function Milestones({ projectId }: MilestonesProps) {
   });
 
   useEffect(() => {
-    setMilestonesState({ ...milestonesState, loading: true });
-    API.getMilestones(projectId, pagination).then(({ data: milestones }) => {
-      setMilestonesState({
-        loading: false,
-        milestones: [...milestonesState.milestones, ...milestones],
-      });
-    });
+    dispatch(getMilestonesAsync({ projectId, pagination }));
   }, [pagination]);
-
-  function editButtonHandler(milestone: MilestoneModel) {
-    setMilestone({ isVisible: true, milestone });
-  }
-
-  async function editMilestoneHandler(projectId: number, milestone: MilestoneModel) {
-    await editMilestoneHandler(projectId, milestone);
-    setMilestonesState({
-      milestones: milestonesState.milestones.map((_milestone) =>
-        _milestone.id === milestone.id ? milestone : _milestone,
-      ),
-    });
-    setMilestone({ isVisible: false });
-  }
-
-  async function createMilestoneHandler(projectId: number, milestone: MilestoneModel) {
-    const responseMilestone = await API.createMilestone(projectId, milestone);
-    setMilestonesState({ milestones: [responseMilestone.data, ...milestonesState.milestones] });
-    setMilestone({ isVisible: false });
-  }
 
   async function createOrEditMilestone(milestone: MilestoneModel) {
     milestone.id
-      ? await editMilestoneHandler(projectId, milestone)
-      : await createMilestoneHandler(projectId, milestone);
+      ? dispatch(editMilestoneAsync({ projectId, milestone }))
+      : dispatch(createMilestoneAsync({ projectId, milestone }));
+
+    setMilestone({ isVisible: false });
   }
 
   function onNextPage() {
     const { page, perPage } = pagination;
     setPagination({ page: page + 1, perPage });
+  }
+
+  function editButtonHandler(milestone: MilestoneModel) {
+    setMilestone({ isVisible: true, milestone });
   }
 
   function showModalMIlestone() {
@@ -73,7 +59,7 @@ export function Milestones({ projectId }: MilestonesProps) {
   return (
     <div className='milestones'>
       <CreateMilestoneButton onClick={showModalMIlestone} />
-      {milestonesState.milestones.map((milestone) => (
+      {milestones.map((milestone) => (
         <Milestone
           key={milestone.id}
           milestone={milestone}
