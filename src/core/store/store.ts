@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import projectsReducer from './features/projects/projects-slice';
-import milestonesReducer from './features/projects/milestones-slice';
+import milestonesReducer from './features/milestones/milestones-slice';
 
 export const store = configureStore({
   reducer: {

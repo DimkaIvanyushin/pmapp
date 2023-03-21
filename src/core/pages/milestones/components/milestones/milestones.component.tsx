@@ -13,7 +13,7 @@ import {
   getMilestonesAsync,
   selectMilestones,
   selectMilestonesStatus,
-} from '../../../../store/features/projects/milestones-slice';
+} from '../../../../store/features/milestones/milestones-slice';
 
 export function Milestones({ projectId }: MilestonesProps) {
   const [pagination, setPagination] = useState<Pagination>({ perPage: 5, page: 1 });
