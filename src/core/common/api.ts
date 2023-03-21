@@ -16,9 +16,8 @@ const config = {
  * Получить список проектов
  * @returns Список проектов
  */
-export function getProjects(signal: AbortSignal): Promise<{ data: Project[] }> {
+export function getProjects(): Promise<{ data: Project[] }> {
   return axios.get(`${apiUrl}/api/v4/projects?membership=true&order_by=last_activity_at`, {
-    signal,
     ...config,
   });
 }
