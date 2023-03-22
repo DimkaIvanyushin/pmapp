@@ -28,6 +28,7 @@ export const projectsSlice = createSlice({
     addProject: (state, { payload: project }: PayloadAction<Project>) => {
       state.projects.allIds = [...state.projects.allIds, project.id];
       state.projects.byId[project.id] = project;
+      state.status = Status.SUCCESS;
     },
   },
 

@@ -47,6 +47,7 @@ export const milestonesSlice = createSlice({
     addMilestone: (state, { payload: milestone }: PayloadAction<Milestone>) => {
       state.milestones.allIds = [...state.milestones.allIds, milestone.id];
       state.milestones.byId[milestone.id] = milestone;
+      state.status = Status.SUCCESS;
     },
   },
 
