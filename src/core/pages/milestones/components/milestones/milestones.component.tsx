@@ -5,21 +5,20 @@ import { MilestonesProps, MilestoneState } from './milestones.types';
 import { Button, Modal } from '../../../../components';
 import { Strings } from '../../../../common';
 import { Milestone, MilestoneCreateForm, CreateMilestoneButton } from '..';
-import './milestones.component.scss';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import {
   createMilestoneAsync,
   editMilestoneAsync,
   getMilestonesAsync,
   selectMilestones,
-  selectMilestonesStatus,
 } from '../../../../store/features/milestones/milestones-slice';
+import './milestones.component.scss';
 
 export function Milestones({ projectId }: MilestonesProps) {
   const [pagination, setPagination] = useState<Pagination>({ perPage: 5, page: 1 });
 
   const dispatch = useAppDispatch();
-  const milestonesState = useAppSelector(selectMilestonesStatus);
+  // const milestonesState = useAppSelector(selectMilestonesStatus);
   const milestones = useAppSelector(selectMilestones(projectId));
 
   const [milestoneState, setMilestone] = useState<MilestoneState>({
