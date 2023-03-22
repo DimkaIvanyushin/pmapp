@@ -26,6 +26,7 @@ code {
   --background-color-list: #fafbfc;
   --success: #28a745;
   --danger: #ff4d4f;
+  --warning: #faad14;
 }
 
 :root .dark {

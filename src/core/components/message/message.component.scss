@@ -1,0 +1,26 @@
+.message-container {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+
+  .message {
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    box-shadow: 0px 7px 25px #0000002b, 3px 4px 12px #0000000f;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+}

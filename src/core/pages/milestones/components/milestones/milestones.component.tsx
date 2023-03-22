@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Milestone as MilestoneModel, Pagination } from '../../../../models';
 import { MilestonesProps, MilestoneState } from './milestones.types';
-import { Button, Modal } from '../../../../components';
+import { Button, Modal, useMeesage } from '../../../../components';
 import { Strings } from '../../../../common';
 import { Milestone, MilestoneCreateForm, CreateMilestoneButton } from '..';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
@@ -21,6 +21,9 @@ export function Milestones({ projectId }: MilestonesProps) {
   // const milestonesState = useAppSelector(selectMilestonesStatus);
   const milestones = useAppSelector(selectMilestones(projectId));
 
+  const [messageApi, contextMessage] = useMeesage();
+  
+
   const [milestoneState, setMilestone] = useState<MilestoneState>({
     milestone: null,
     isVisible: false,
@@ -35,6 +38,7 @@ export function Milestones({ projectId }: MilestonesProps) {
       ? dispatch(editMilestoneAsync({ projectId, milestone }))
       : dispatch(createMilestoneAsync({ projectId, milestone }));
 
+    messageApi.success('Успешно!');
     setMilestone({ isVisible: false });
   }
 
@@ -57,6 +61,7 @@ export function Milestones({ projectId }: MilestonesProps) {
 
   return (
     <div className='milestones'>
+      {contextMessage}
       <CreateMilestoneButton onClick={showModalMIlestone} />
       {milestones.map((milestone) => (
         <Milestone
