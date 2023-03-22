@@ -7,7 +7,6 @@ import { IssueState, MilestoneBodyProps, MilestoneProps } from '..';
 import { Strings, API } from '../../../../common';
 import './milestone.component.scss';
 
-
 const INTERVAL_REFRESH_DATA = 300000;
 
 export function Milestone({ milestone, projectId, editHandler }: MilestoneProps) {
