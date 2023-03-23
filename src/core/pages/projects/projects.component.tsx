@@ -30,7 +30,6 @@ export default function Projects() {
 
   return (
     <div className='project-contents'>
-    
       {projectsStatus === Status.LOADING && <LoadingIcon />}
 
       {projects.map((project) => (

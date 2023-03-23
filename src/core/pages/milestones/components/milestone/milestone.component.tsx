@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { Issue, IssueStateEnum } from '../../../../models';
-import { Collapse, Modal } from '../../../../components';
+import { Collapse, Modal, useMessage } from '../../../../components';
 import { MilestoneHeader, MilestoneBody, IssueForm } from '..';
 import { IssueState, MilestoneBodyProps, MilestoneProps } from '..';
 import { Strings, API } from '../../../../common';
@@ -15,6 +15,8 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
   const [issueState, setIssueState] = useState<IssueState>({
     isVisible: false,
   });
+
+  const [messageApi, contextMessage] = useMessage();
 
   useEffect(() => {
     const intervalId = setInterval(
@@ -45,6 +47,7 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
     const responseIssue = await API.createIssue(projectId, milestone.id, issue);
     setIssues([responseIssue.data, ...issues]);
     setIssueState({ isVisible: false });
+    messageApi.success(Strings.success);
   }
 
   function showModalIssue() {
@@ -57,6 +60,8 @@ export function Milestone({ milestone, projectId, editHandler }: MilestoneProps)
 
   return (
     <>
+      {contextMessage}
+
       <Collapse>
         <MilestoneHeader
           issues={issuesProps}

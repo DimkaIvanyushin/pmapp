@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { FaCheck, FaBug, FaExclamationCircle, FaExclamationTriangle } from 'react-icons/fa';
+import { FaCheck, FaExclamationCircle, FaExclamationTriangle } from 'react-icons/fa';
 import './message.component.scss';
 
 export enum MessageType {
@@ -24,7 +24,7 @@ type MessageApi = {
 
 type MessageReturn = [MessageApi, JSX.Element];
 
-export function useMeesage(): MessageReturn {
+export function useMessage(): MessageReturn {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [message, setMessage] = useState<MessageProps>({ message: '', type: MessageType.INFO });
 
@@ -61,7 +61,7 @@ export function useMeesage(): MessageReturn {
 function switchIcon(type: MessageType) {
   const icons: { [key: number]: JSX.Element } = {
     [MessageType.SUCCESS]: <FaCheck color='#28a745' />,
-    [MessageType.DANGER]: <FaBug color='#ff4d4f' />,
+    [MessageType.DANGER]: <FaExclamationCircle color='#ff4d4f' />,
     [MessageType.WARNING]: <FaExclamationTriangle color='#faad14' />,
     [MessageType.INFO]: <FaExclamationCircle color='#0366d6' />,
   };

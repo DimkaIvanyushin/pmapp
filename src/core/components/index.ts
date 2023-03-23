@@ -20,4 +20,4 @@ export { Progress } from './progress/progress.component';
 export { Tooltip } from './tooltip/tooltip.component';
 export { SwitchLanguage } from './switch-language/switch-language.component';
 export { SwitchTheme } from './switch-theme/switch-theme.component';
-export { useMeesage } from './message/message.component';
+export { useMessage } from './message/message.component';
